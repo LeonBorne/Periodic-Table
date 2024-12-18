@@ -1,0 +1,5901 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Periodic Table</title>
+	<link rel="icon" type="icon" href="logo.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		.hidden-class{
+			display: none !important;
+		}
+	</style>
+</head>
+<body>
+
+
+	<a title="Menu" id="menu-open-button" onclick="ShowMenu()" style="display:none;">	
+		<svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="white"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg>
+	</a>
+
+
+	<div id="menu" class="menu-class-hidden">
+		
+		<div id="menu-inside-container" style="display: none;">
+			
+			<a id="menu-back-button" onclick="HideMenu()">&cross;</a>
+
+			<div class="menu-text" id="menu-header">
+				Menu
+			</div>
+
+			<div id="menu-button-container">
+				<a href="index.html" class="menu-button">Periodic Table History</a>
+				<a href="periodic-table.html" class="menu-button now-page">Modern Periodic Table</a>
+				<a href="sources.html" class="menu-button">Sources</a>
+			</div>
+		</div>
+	</div>
+
+	<header id="nav-bar-container" style="display:none;">
+		<nav>
+			
+			<div id="logo-container">
+				<img src="logo.png">
+			</div>
+			<div id="nav-buttons-container">
+				Highlight:
+				<a onclick="ShowLabel('1')" id="highlighter-label-1-activator" class="nav-button bg-green">
+					Blocks
+				</a>
+				<a onclick="ShowLabel('2')" id="highlighter-label-2-activator" class="nav-button">
+					Type
+				</a>
+			</div>
+		</nav>
+	</header>
+
+	<main id="main-main-container" style="display:none;">
+		
+		<div class="mpt-container" id="mpt-container">
+
+			<div id="group-1" class="group-names">1</div>
+			<div id="group-2" class="group-names">2</div>
+			<div id="group-3" class="group-names">3</div>
+			<div id="group-4" class="group-names">4</div>
+			<div id="group-5" class="group-names">5</div>
+			<div id="group-6" class="group-names">6</div>
+			<div id="group-7" class="group-names">7</div>
+			<div id="group-8" class="group-names">8</div>
+			<div id="group-9" class="group-names">9</div>
+			<div id="group-10" class="group-names">10</div>
+			<div id="group-11" class="group-names">11</div>
+			<div id="group-12" class="group-names">12</div>
+			<div id="group-13" class="group-names">13</div>
+			<div id="group-14" class="group-names">14</div>
+			<div id="group-15" class="group-names">15</div>
+			<div id="group-16" class="group-names">16</div>
+			<div id="group-17" class="group-names">17</div>
+			<div id="group-18" class="group-names">18</div>
+
+			
+			<div class="period" id="period-1">
+				
+				<div id="atm-1" class="element-container">
+					<a onclick="ShowInfo('atm-1')" class="element-holder non-metal s-block bg-lightgreen">
+						<span>
+							<sup>1</sup>
+							H							
+						</span>
+						<span class="element-name">
+							Hydrogen
+						</span>
+					</a>
+					
+				</div>
+
+				<div id="atm-2" class="element-container inert-gas"> 
+					<a onclick="ShowInfo('atm-2')" class="element-holder inert-gas p-block bg-lightblue">
+						<span>
+							<sup>2</sup>
+							He					
+						</span>
+						<span class="element-name">
+							Helium
+						</span>
+					</a>
+					
+				</div>
+
+			</div>
+
+			<div class="period" id="period-2">
+				
+				<div id="atm-3" class="element-container">
+					<a onclick="ShowInfo('atm-3')" class="element-holder alkali-metal s-block bg-lightgreen">
+						<span>
+							<sup>3</sup>
+							Li					
+						</span>
+						<span class="element-name">
+							Lithium
+						</span>
+					</a>
+					
+				</div>
+				<div id="atm-4" class="element-container">
+					<a onclick="ShowInfo('atm-4')" class="element-holder earth-alkali-metal s-block bg-lightgreen">
+						<span>
+							<sup>4</sup>
+							Be					
+						</span>
+						<span class="element-name">
+							Berelium
+						</span>
+					</a>
+					
+				</div>
+				<div id="atm-5" class="element-container">
+					<a onclick="ShowInfo('atm-5')" class="element-holder metalloid p-block bg-lightblue">
+						<span>
+							<sup>5</sup>
+							B					
+						</span>
+						<span class="element-name">
+							Boron
+						</span>
+					</a>
+					
+				</div>
+				<div id="atm-6" class="element-container">
+					<a onclick="ShowInfo('atm-6')" class="element-holder non-metal p-block bg-lightblue">
+						<span>
+							<sup>6</sup>
+							C					
+						</span>
+						<span class="element-name">
+							Carbon
+						</span>
+					</a>
+					
+				</div>
+				<div id="atm-7" class="element-container">
+					<a onclick="ShowInfo('atm-7')" class="element-holder non-metal p-block bg-lightblue">
+						<span>
+							<sup>7</sup>
+							N					
+						</span>
+						<span class="element-name">
+							Nitrogen
+						</span>
+					</a>
+					
+				</div>
+				<div id="atm-8" class="element-container">
+					<a onclick="ShowInfo('atm-8')" class="element-holder non-metal p-block bg-lightblue">
+						<span>
+							<sup>8</sup>
+							O					
+						</span>
+						<span class="element-name">
+							Oxygen
+						</span>
+					</a>
+					
+				</div>
+				<div id="atm-9" class="element-container">
+					<a onclick="ShowInfo('atm-9')" class="element-holder halogen p-block bg-lightblue">
+						<span>
+							<sup>9</sup>
+							F					
+						</span>
+						<span class="element-name">
+							Fluorine
+						</span>
+					</a>
+					
+				</div>
+				<div id="atm-10" class="element-container">
+					<a onclick="ShowInfo('atm-10')" class="element-holder inert-gas p-block bg-lightblue">
+						<span>
+							<sup>10</sup>
+							Ne					
+						</span>
+						<span class="element-name">
+							Neon
+						</span>
+					</a>
+					
+				</div>
+
+			</div>
+
+			<div class="period" id="period-3">
+				
+				<div id="atm-11" class="element-container">
+					<a onclick="ShowInfo('atm-11')" class="element-holder alkali-metal s-block bg-lightgreen">
+						<span>
+							<sup>11</sup>
+							Na
+						</span>
+						<span class="element-name">
+							Sodium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-12" class="element-container">
+					<a onclick="ShowInfo('atm-12')" class="element-holder earth-alkali-metal s-block bg-lightgreen">
+						<span>
+							<sup>12</sup>
+							Mg
+						</span>
+						<span class="element-name">
+							Magnesium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-13" class="element-container">
+					<a onclick="ShowInfo('atm-13')" class="element-holder post-transition p-block bg-lightblue">
+						<span>
+							<sup>13</sup>
+							Al
+						</span>
+						<span class="element-name">
+							Aluminum
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-14" class="element-container">
+					<a onclick="ShowInfo('atm-14')" class="element-holder metalloid p-block bg-lightblue">
+						<span>
+							<sup>14</sup>
+							Si
+						</span>
+						<span class="element-name">
+							Silicon
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-15" class="element-container">
+					<a onclick="ShowInfo('atm-15')" class="element-holder non-metal p-block bg-lightblue">
+						<span>
+							<sup>15</sup>
+							P
+						</span>
+						<span class="element-name">
+							Phosphorus
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-16" class="element-container">
+					<a onclick="ShowInfo('atm-16')" class="element-holder non-metal p-block bg-lightblue">
+						<span>
+							<sup>16</sup>
+							S
+						</span>
+						<span class="element-name">
+							Sulfur
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-17" class="element-container">
+					<a onclick="ShowInfo('atm-17')" class="element-holder halogen p-block bg-lightblue">
+						<span>
+							<sup>17</sup>
+							Cl
+						</span>
+						<span class="element-name">
+							Chlorine
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-18" class="element-container">
+					<a onclick="ShowInfo('atm-18')" class="element-holder inert-gas p-block bg-lightblue">
+						<span>
+							<sup>18</sup>
+							Ar
+						</span>
+						<span class="element-name">
+							Argon
+						</span>
+					</a>
+				</div>
+
+
+			</div>
+
+
+			<div class="period" id="period-4">
+
+				<div id="atm-19" class="element-container"> 
+					<a onclick="ShowInfo('atm-19')" class="element-holder alkali-metal s-block bg-lightgreen">
+						<span>
+							<sup>19</sup>
+							K
+						</span>
+						<span class="element-name">
+							Potassium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-20" class="element-container">
+					<a onclick="ShowInfo('atm-20')" class="element-holder earth-alkali-metal s-block bg-lightgreen">
+						<span>
+							<sup>20</sup>
+							Ca
+						</span>
+						<span class="element-name">
+							Calcium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-21" class="element-container">
+					<a onclick="ShowInfo('atm-21')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>21</sup>
+							Sc
+						</span>
+						<span class="element-name">
+							Scandium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-22" class="element-container">
+					<a onclick="ShowInfo('atm-22')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>22</sup>
+							Ti
+						</span>
+						<span class="element-name">
+							Titanium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-23" class="element-container">
+					<a onclick="ShowInfo('atm-23')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>23</sup>
+							V
+						</span>
+						<span class="element-name">
+							Vanadium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-24" class="element-container">
+					<a onclick="ShowInfo('atm-24')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>24</sup>
+							Cr
+						</span>
+						<span class="element-name">
+							Chromium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-25" class="element-container">
+					<a onclick="ShowInfo('atm-25')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>25</sup>
+							Mn
+						</span>
+						<span class="element-name">
+							Manganese
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-26" class="element-container">
+					<a onclick="ShowInfo('atm-26')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>26</sup>
+							Fe
+						</span>
+						<span class="element-name">
+							Iron
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-27" class="element-container">
+					<a onclick="ShowInfo('atm-27')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>27</sup>
+							Co
+						</span>
+						<span class="element-name">
+							Cobalt
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-28" class="element-container">
+					<a onclick="ShowInfo('atm-28')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>28</sup>
+							Ni
+						</span>
+						<span class="element-name">
+							Nickel
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-29" class="element-container">
+					<a onclick="ShowInfo('atm-29')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>29</sup>
+							Cu
+						</span>
+						<span class="element-name">
+							Copper
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-30" class="element-container">
+					<a onclick="ShowInfo('atm-30')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>30</sup>
+							Zn
+						</span>
+						<span class="element-name">
+							Zinc
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-31" class="element-container">
+					<a onclick="ShowInfo('atm-31')" class="element-holder post-transition p-block bg-lightblue">
+						<span>
+							<sup>31</sup>
+							Ga
+						</span>
+						<span class="element-name">
+							Gallium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-32" class="element-container">
+					<a onclick="ShowInfo('atm-32')" class="element-holder metalloid p-block bg-lightblue">
+						<span>
+							<sup>32</sup>
+							Ge
+						</span>
+						<span class="element-name">
+							Germanium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-33" class="element-container">
+					<a onclick="ShowInfo('atm-33')" class="element-holder metalloid p-block bg-lightblue">
+						<span>
+							<sup>33</sup>
+							As
+						</span>
+						<span class="element-name">
+							Arsenic
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-34" class="element-container">
+					<a onclick="ShowInfo('atm-34')" class="element-holder non-metal p-block bg-lightblue">
+						<span>
+							<sup>34</sup>
+							Se
+						</span>
+						<span class="element-name">
+							Selenium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-35" class="element-container">
+					<a onclick="ShowInfo('atm-35')" class="element-holder halogen p-block bg-lightblue">
+						<span>
+							<sup>35</sup>
+							Br
+						</span>
+						<span class="element-name">
+							Bromine
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-36" class="element-container">
+					<a onclick="ShowInfo('atm-36')" class="element-holder inert-gas p-block bg-lightblue">
+						<span>
+							<sup>36</sup>
+							Kr
+						</span>
+						<span class="element-name">
+							Krypton
+						</span>
+					</a>
+				</div>
+
+
+
+			</div>
+
+			<div class="period" id="period-5">
+
+			<div id="atm-37" class="element-container">
+				<a onclick="ShowInfo('atm-37')" class="element-holder alkali-metal s-block bg-lightgreen">
+					<span>
+						<sup>37</sup>
+						Rb
+					</span>
+					<span class="element-name">
+						Rubidium
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-38" class="element-container">
+				<a onclick="ShowInfo('atm-38')" class="element-holder earth-alkali-metal s-block bg-lightgreen">
+					<span>
+						<sup>38</sup>
+						Sr
+					</span>
+					<span class="element-name">
+						Strontium
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-39" class="element-container">
+				<a onclick="ShowInfo('atm-39')" class="element-holder transition  d-block bg-orange">
+					<span>
+						<sup>39</sup>
+						Y
+					</span>
+					<span class="element-name">
+						Yttrium
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-40" class="element-container">
+				<a onclick="ShowInfo('atm-40')" class="element-holder transition d-block bg-orange">
+					<span>
+						<sup>40</sup>
+						Zr
+					</span>
+					<span class="element-name">
+						Zirconium
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-41" class="element-container">
+				<a onclick="ShowInfo('atm-41')" class="element-holder transition d-block bg-orange">
+					<span>
+						<sup>41</sup>
+						Nb
+					</span>
+					<span class="element-name">
+						Niobium
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-42" class="element-container">
+				<a onclick="ShowInfo('atm-42')" class="element-holder transition d-block bg-orange">
+					<span>
+						<sup>42</sup>
+						Mo
+					</span>
+					<span class="element-name">
+						Molybdenum
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-43" class="element-container">
+				<a onclick="ShowInfo('atm-43')" class="element-holder transition d-block bg-orange">
+					<span>
+						<sup>43</sup>
+						Tc
+					</span>
+					<span class="element-name">
+						Technetium
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-44" class="element-container">
+				<a onclick="ShowInfo('atm-44')" class="element-holder transition d-block bg-orange">
+					<span>
+						<sup>44</sup>
+						Ru
+					</span>
+					<span class="element-name">
+						Ruthenium
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-45" class="element-container">
+				<a onclick="ShowInfo('atm-45')" class="element-holder transition d-block bg-orange">
+					<span>
+						<sup>45</sup>
+						Rh
+					</span>
+					<span class="element-name">
+						Rhodium
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-46" class="element-container">
+				<a onclick="ShowInfo('atm-46')" class="element-holder transition d-block bg-orange">
+					<span>
+						<sup>46</sup>
+						Pd
+					</span>
+					<span class="element-name">
+						Palladium
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-47" class="element-container">
+				<a onclick="ShowInfo('atm-47')" class="element-holder transition d-block bg-orange">
+					<span>
+						<sup>47</sup>
+						Ag
+					</span>
+					<span class="element-name">
+						Silver
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-48" class="element-container">
+				<a onclick="ShowInfo('atm-48')" class="element-holder transition d-block bg-orange">
+					<span>
+						<sup>48</sup>
+						Cd
+					</span>
+					<span class="element-name">
+						Cadmium
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-49" class="element-container">
+				<a onclick="ShowInfo('atm-49')" class="element-holder post-transition p-block bg-lightblue">
+					<span>
+						<sup>49</sup>
+						In
+					</span>
+					<span class="element-name">
+						Indium
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-50" class="element-container">
+				<a onclick="ShowInfo('atm-50')" class="element-holder post-transition p-block bg-lightblue">
+					<span>
+						<sup>50</sup>
+						Sn
+					</span>
+					<span class="element-name">
+						Tin
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-51" class="element-container">
+				<a onclick="ShowInfo('atm-51')" class="element-holder metalloid p-block bg-lightblue">
+					<span>
+						<sup>51</sup>
+						Sb
+					</span>
+					<span class="element-name">
+						Antimony
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-52" class="element-container">
+				<a onclick="ShowInfo('atm-52')" class="element-holder metalloid p-block bg-lightblue">
+					<span>
+						<sup>52</sup>
+						Te
+					</span>
+					<span class="element-name">
+						Tellurium
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-53" class="element-container">
+				<a onclick="ShowInfo('atm-53')" class="element-holder halogen p-block bg-lightblue">
+					<span>
+						<sup>53</sup>
+						I
+					</span>
+					<span class="element-name">
+						Iodine
+					</span>
+				</a>
+			</div>
+
+			<div id="atm-54" class="element-container">
+				<a onclick="ShowInfo('atm-54')" class="element-holder inert-gas p-block bg-lightblue">
+					<span>
+						<sup>54</sup>
+						Xe
+					</span>
+					<span class="element-name">
+						Xenon
+					</span>
+				</a>
+			</div>
+
+
+
+			</div>
+
+
+			<div class="period" id="period-6">
+
+				<div id="atm-55" class="element-container">
+					<a onclick="ShowInfo('atm-55')" class="element-holder alkali-metal s-block bg-lightgreen">
+						<span>
+							<sup>55</sup>
+							Cs
+						</span>
+						<span class="element-name">
+							Cesium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-56" class="element-container">
+					<a onclick="ShowInfo('atm-56')" class="element-holder earth-alkali-metal s-block bg-lightgreen">
+						<span>
+							<sup>56</sup>
+							Ba
+						</span>
+						<span class="element-name">
+							Barium
+						</span>
+					</a>
+				</div>
+
+
+				<div id="lanthanide-container" class="element-container">
+					<a class="element-holder lanth bg-red">
+						<span>
+						<sup>57-71</sup>
+						Lan-
+					</span>
+					<span class="element-name">
+
+					</span>
+					</a>
+				</div>
+
+
+				<div id="atm-72" class="element-container">
+					<a onclick="ShowInfo('atm-72')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>72</sup>
+							Hf
+						</span>
+						<span class="element-name">
+							Hafnium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-73" class="element-container">
+					<a onclick="ShowInfo('atm-73')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>73</sup>
+							Ta
+						</span>
+						<span class="element-name">
+							Tantalum
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-74" class="element-container">
+					<a onclick="ShowInfo('atm-74')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>74</sup>
+							W
+						</span>
+						<span class="element-name">
+							Tungsten
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-75" class="element-container">
+					<a onclick="ShowInfo('atm-75')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>75</sup>
+							Re
+						</span>
+						<span class="element-name">
+							Rhenium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-76" class="element-container">
+					<a onclick="ShowInfo('atm-76')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>76</sup>
+							Os
+						</span>
+						<span class="element-name">
+							Osmium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-77" class="element-container">
+					<a onclick="ShowInfo('atm-77')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>77</sup>
+							Ir
+						</span>
+						<span class="element-name">
+							Iridium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-78" class="element-container">
+					<a onclick="ShowInfo('atm-78')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>78</sup>
+							Pt
+						</span>
+						<span class="element-name">
+							Platinum
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-79" class="element-container">
+					<a onclick="ShowInfo('atm-79')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>79</sup>
+							Au
+						</span>
+						<span class="element-name">
+							Gold
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-80" class="element-container">
+					<a onclick="ShowInfo('atm-80')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>80</sup>
+							Hg
+						</span>
+						<span class="element-name">
+							Mercury
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-81" class="element-container">
+					<a onclick="ShowInfo('atm-81')" class="element-holder post-transition p-block bg-lightblue">
+						<span>
+							<sup>81</sup>
+							Tl
+						</span>
+						<span class="element-name">
+							Thallium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-82" class="element-container">
+					<a onclick="ShowInfo('atm-82')" class="element-holder post-transition p-block bg-lightblue">
+						<span>
+							<sup>82</sup>
+							Pb
+						</span>
+						<span class="element-name">
+							Lead
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-83" class="element-container">
+					<a onclick="ShowInfo('atm-83')" class="element-holder post-transition p-block bg-lightblue">
+						<span>
+							<sup>83</sup>
+							Bi
+						</span>
+						<span class="element-name">
+							Bismuth
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-84" class="element-container">
+					<a onclick="ShowInfo('atm-84')" class="element-holder post-transition p-block bg-lightblue">
+						<span>
+							<sup>84</sup>
+							Po
+						</span>
+						<span class="element-name">
+							Polonium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-85" class="element-container">
+					<a onclick="ShowInfo('atm-85')" class="element-holder halogen p-block bg-lightblue">
+						<span>
+							<sup>85</sup>
+							At
+						</span>
+						<span class="element-name">
+							Astatine
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-86" class="element-container">
+					<a onclick="ShowInfo('atm-86')" class="element-holder inert-gas p-block bg-lightblue">
+						<span>
+							<sup>86</sup>
+							Rn
+						</span>
+						<span class="element-name">
+							Radon
+						</span>
+					</a>
+				</div>
+
+
+
+			</div>
+
+			<div class="period" id="period-7">
+				<div id="atm-87" class="element-container">
+					<a onclick="ShowInfo('atm-87')" class="element-holder alkali-metal s-block bg-lightgreen">
+						<span>
+							<sup>87</sup>
+							Fr
+						</span>
+						<span class="element-name">
+							Francium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-88" class="element-container">
+					<a onclick="ShowInfo('atm-88')" class="element-holder earth-alkali-metal s-block bg-lightgreen">
+						<span>
+							<sup>88</sup>
+							Ra
+						</span>
+						<span class="element-name">
+							Radium
+						</span>
+					</a>
+				</div>
+
+
+				<div id="actanide-container" class="element-container">
+					<a class="element-holder acta bg-red">
+						<span>
+						<sup>89-103</sup>
+						Act-
+					</span>
+					<span class="element-name">
+
+					</span>
+					</a>
+				</div>
+
+
+
+				<div id="atm-104" class="element-container">
+					<a onclick="ShowInfo('atm-104')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>104</sup>
+							Rf
+						</span>
+						<span class="element-name">
+							Rutherfordium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-105" class="element-container">
+					<a onclick="ShowInfo('atm-105')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>105</sup>
+							Db
+						</span>
+						<span class="element-name">
+							Dubnium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-106" class="element-container">
+					<a onclick="ShowInfo('atm-106')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>106</sup>
+							Sg
+						</span>
+						<span class="element-name">
+							Shahabium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-107" class="element-container">
+					<a onclick="ShowInfo('atm-107')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>107</sup>
+							Bh
+						</span>
+						<span class="element-name">
+							Bohrium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-108" class="element-container">
+					<a onclick="ShowInfo('atm-108')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>108</sup>
+							Hs
+						</span>
+						<span class="element-name">
+							Hassium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-109" class="element-container">
+					<a onclick="ShowInfo('atm-109')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>109</sup>
+							Mt
+						</span>
+						<span class="element-name">
+							Meitnerium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-110" class="element-container">
+					<a onclick="ShowInfo('atm-110')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>110</sup>
+							Ds
+						</span>
+						<span class="element-name">
+							Darmstadtium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-111" class="element-container">
+					<a onclick="ShowInfo('atm-111')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>111</sup>
+							Rg
+						</span>
+						<span class="element-name">
+							Roentgenium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-112" class="element-container">
+					<a onclick="ShowInfo('atm-112')" class="element-holder transition d-block bg-orange">
+						<span>
+							<sup>112</sup>
+							Cn
+						</span>
+						<span class="element-name">
+							Copernicium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-113" class="element-container">
+					<a onclick="ShowInfo('atm-113')" class="element-holder post-transition p-block bg-lightblue">
+						<span>
+							<sup>113</sup>
+							Nh
+						</span>
+						<span class="element-name">
+							Nihonium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-114" class="element-container">
+					<a onclick="ShowInfo('atm-114')" class="element-holder post-transition p-block bg-lightblue">
+						<span>
+							<sup>114</sup>
+							Fl
+						</span>
+						<span class="element-name">
+							Flerovium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-115" class="element-container">
+					<a onclick="ShowInfo('atm-115')" class="element-holder post-transition p-block bg-lightblue">
+						<span>
+							<sup>115</sup>
+							Mc
+						</span>
+						<span class="element-name">
+							Moscovium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-116" class="element-container">
+					<a onclick="ShowInfo('atm-116')" class="element-holder post-transition p-block bg-lightblue">
+						<span>
+							<sup>116</sup>
+							Lv
+						</span>
+						<span class="element-name">
+							Livermorium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-117" class="element-container">
+					<a onclick="ShowInfo('atm-117')" class="element-holder halogen p-block bg-lightblue">
+						<span>
+							<sup>117</sup>
+							Ts
+						</span>
+						<span class="element-name">
+							Tennessine
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-118" class="element-container">
+					<a onclick="ShowInfo('atm-118')" class="element-holder inert-gas p-block bg-lightblue">
+						<span>
+							<sup>118</sup>
+							Og
+						</span>
+						<span class="element-name">
+							Oganesson
+						</span>
+					</a>
+				</div>
+
+
+
+			</div>
+
+			<!-- Lanthanides -->
+			<div class="period lanthanides" id="period-9">
+				
+				<div id="atm-57" class="element-container">
+					<a onclick="ShowInfo('atm-57')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>57</sup>
+							La
+						</span>
+						<span class="element-name">
+							Lanthanum
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-58" class="element-container">
+					<a onclick="ShowInfo('atm-58')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>58</sup>
+							Ce
+						</span>
+						<span class="element-name">
+							Cerium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-59" class="element-container">
+					<a onclick="ShowInfo('atm-59')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>59</sup>
+							Pr
+						</span>
+						<span class="element-name">
+							Praseodymium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-60" class="element-container">
+					<a onclick="ShowInfo('atm-60')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>60</sup>
+							Nd
+						</span>
+						<span class="element-name">
+							Neodymium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-61" class="element-container">
+					<a onclick="ShowInfo('atm-61')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>61</sup>
+							Pm
+						</span>
+						<span class="element-name">
+							Promethium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-62" class="element-container">
+					<a onclick="ShowInfo('atm-62')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>62</sup>
+							Sm
+						</span>
+						<span class="element-name">
+							Samarium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-63" class="element-container">
+					<a onclick="ShowInfo('atm-63')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>63</sup>
+							Eu
+						</span>
+						<span class="element-name">
+							Europium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-64" class="element-container">
+					<a onclick="ShowInfo('atm-64')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>64</sup>
+							Gd
+						</span>
+						<span class="element-name">
+							Gadolinium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-65" class="element-container">
+					<a onclick="ShowInfo('atm-65')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>65</sup>
+							Tb
+						</span>
+						<span class="element-name">
+							Terbium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-66" class="element-container">
+					<a onclick="ShowInfo('atm-66')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>66</sup>
+							Dy
+						</span>
+						<span class="element-name">
+							Dysprosium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-67" class="element-container">
+					<a onclick="ShowInfo('atm-67')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>67</sup>
+							Ho
+						</span>
+						<span class="element-name">
+							Holmium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-68" class="element-container">
+					<a onclick="ShowInfo('atm-68')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>68</sup>
+							Er
+						</span>
+						<span class="element-name">
+							Erbium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-69" class="element-container">
+					<a onclick="ShowInfo('atm-69')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>69</sup>
+							Tm
+						</span>
+						<span class="element-name">
+							Thulium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-70" class="element-container">
+					<a onclick="ShowInfo('atm-70')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>70</sup>
+							Yb
+						</span>
+						<span class="element-name">
+							Ytterbium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-71" class="element-container">
+					<a onclick="ShowInfo('atm-71')" class="element-holder f-block bg-yellow lanthanides">
+						<span>
+							<sup>71</sup>
+							Lu
+						</span>
+						<span class="element-name">
+							Lutetium
+						</span>
+					</a>
+				</div>
+
+
+
+			</div>
+
+
+			<!-- Actenides -->
+			<div class="period actanides" id="period-10">
+				
+				<div id="atm-89" class="element-container">
+					<a onclick="ShowInfo('atm-89')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>89</sup>
+							Ac
+						</span>
+						<span class="element-name">
+							Actinium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-90" class="element-container">
+					<a onclick="ShowInfo('atm-90')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>90</sup>
+							Th
+						</span>
+						<span class="element-name">
+							Thorium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-91" class="element-container">
+					<a onclick="ShowInfo('atm-91')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>91</sup>
+							Pa
+						</span>
+						<span class="element-name">
+							Protactinium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-92" class="element-container">
+					<a onclick="ShowInfo('atm-92')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>92</sup>
+							U
+						</span>
+						<span class="element-name">
+							Uranium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-93" class="element-container">
+					<a onclick="ShowInfo('atm-93')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>93</sup>
+							Np
+						</span>
+						<span class="element-name">
+							Neptunium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-94" class="element-container">
+					<a onclick="ShowInfo('atm-94')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>94</sup>
+							Pu
+						</span>
+						<span class="element-name">
+							Plutonium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-95" class="element-container">
+					<a onclick="ShowInfo('atm-95')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>95</sup>
+							Am
+						</span>
+						<span class="element-name">
+							Americium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-96" class="element-container">
+					<a onclick="ShowInfo('atm-96')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>96</sup>
+							Cm
+						</span>
+						<span class="element-name">
+							Curium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-97" class="element-container">
+					<a onclick="ShowInfo('atm-97')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>97</sup>
+							Bk
+						</span>
+						<span class="element-name">
+							Berkelium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-98" class="element-container">
+					<a onclick="ShowInfo('atm-98')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>98</sup>
+							Cf
+						</span>
+						<span class="element-name">
+							Calignium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-99" class="element-container">
+					<a onclick="ShowInfo('atm-99')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>99</sup>
+							Es
+						</span>
+						<span class="element-name">
+							Einstinium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-100" class="element-container">
+					<a onclick="ShowInfo('atm-100')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>100</sup>
+							Fm
+						</span>
+						<span class="element-name">
+							Fermium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-101" class="element-container">
+					<a onclick="ShowInfo('atm-101')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>101</sup>
+							Md
+						</span>
+						<span class="element-name">
+							Mendelevium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-102" class="element-container">
+					<a onclick="ShowInfo('atm-102')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>102</sup>
+							No
+						</span>
+						<span class="element-name">
+							Nobelium
+						</span>
+					</a>
+				</div>
+
+				<div id="atm-103" class="element-container">
+					<a onclick="ShowInfo('atm-103')" class="element-holder f-block bg-yellow actanides">
+						<span>
+							<sup>103</sup>
+							Lr
+						</span>
+						<span class="element-name">
+							Lawrencium
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+	<div class="loading-screen-container" id="loading-screen-container" style="display:flex;">
+		 <div class="loading-screen-image-container">
+		 	<img src="logo.png" class="loading-screen-image" alt="Logo">
+		 </div>
+		 <div class="loading-line"></div>
+
+		 <div id="credit" class="credit">
+		 	Created by: Samyog Mishra
+		 </div>
+
+		<div class="easter" id="easter">
+			You are sharp, stranger!
+		</div>
+	</div>
+
+
+
+
+
+	<div id="element-info-container-background" class="hide-element-disc-container-background">
+		<div id="element-info-container" class="element-info-container hide-element-disc-container-background">
+			
+			<div class="back-button-container">
+				<a onclick="HideElementDescContainer()" id="back-button" >&cross;</a>
+			</div>
+
+
+			<div id="atm-1-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/yzyxtXf7-1PdspRt_Qh3jNFZFGE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/hydrogenatom-58b6029c3df78cdcd83d98bb.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Hydrogen (Non-Metal)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 1
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 1s<sup>1</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 1 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 1
+					</div>
+					<div class="atm-uses">
+						It is mostly used for Ammonia production (NH<sub>3</sub>) and refining petroleum products.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes: 
+						<ol>
+							<li>Protium = Has 0 neutron</li>
+							<li>Teuterium = Has 1 neutron</li>
+							<li>Tritium = Has 2 neutrons</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div id="atm-2-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/K7hyFEP6HdbrjmpJh4tujgJjuz8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/heliumatom-58b602983df78cdcd83d95c8.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Helium (Noble Gas)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 2
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 1s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 4.0026 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 0
+			        </div>
+			        <div class="atm-uses">
+			            It is used in cryogenics, as a cooling medium in MRI scanners, and as a lifting gas in balloons.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Helium-3 = Has 1 neutron</li>
+			                <li>Helium-4 = Has 2 neutrons</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-3-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/rPktFn1EKy3Q2LcE2ATknAweD1g=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/lithiumatom-58b602933df78cdcd83d927b.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Lithium (Alkali Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 3
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 2s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 6.94 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1
+			        </div>
+			        <div class="atm-uses">
+			            It is used in rechargeable batteries, heat-resistant glass, and as a lubricant in some industrial processes.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Lithium-6 = Has 3 neutrons</li>
+			                <li>Lithium-7 = Has 4 neutrons</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-4-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/OoBeroMYBieiS5ecrmkNPxorKgg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/berylliumatom-58b6028f3df78cdcd83d8f11.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Beryllium (Alkaline Earth Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 4
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 2s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 9.0122 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2
+			        </div>
+			        <div class="atm-uses">
+			            It is used in aerospace materials, X-ray windows, and as a moderator in nuclear reactors.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Beryllium-9 = Has 5 neutrons</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-5-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/EcP_kUY5bqs2sDbgnVxjxa_B4rE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/boronatom-58b6028a5f9b5860464c90ab.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Boron (Metalloid)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 5
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 2s<sup>2</sup> 2p<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 10.81 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            It is used in glass and ceramics, as an additive in detergents, and in the production of semiconductors.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Boron-10 = Has 5 neutrons</li>
+			                <li>Boron-11 = Has 6 neutrons</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-6-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/bE_wb6vjJ_MCUDOYNR36MnWPNCI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/carbonatom-58b602855f9b5860464c8bf6.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Carbon (Non-Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 6
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 2s<sup>2</sup> 2p<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 12.011 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 4
+			        </div>
+			        <div class="atm-uses">
+			            It is used in the production of steel, carbon black, and is the basis for all life forms.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Carbon-12 = Has 6 neutrons</li>
+			                <li>Carbon-13 = Has 7 neutrons</li>
+			                <li>Carbon-14 = Has 8 neutrons</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-7-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/-sGUtDTMfUiZPgACj61coujqo7Q=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/nitrogenaton-58b602813df78cdcd83d8348.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Nitrogen (Non-Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 7
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 2s<sup>2</sup> 2p<sup>3</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 14.007 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            It is used in the production of ammonia, fertilizers, and in industrial applications as an inert gas.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Nitrogen-14 = Has 7 neutrons</li>
+			                <li>Nitrogen-15 = Has 8 neutrons</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-8-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/wAHdnSy9-FZqavnxWPu98roXQEs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/oxygen-58b6027d3df78cdcd83d7f42.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Oxygen (Non-Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 8
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 2s<sup>2</sup> 2p<sup>4</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 16 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2
+			        </div>
+			        <div class="atm-uses">
+			            It is essential for respiration in most organisms and is used in water purification and medical applications.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Oxygen-16 = Most abundant isotope</li>
+			                <li>Oxygen-17 = Stable isotope</li>
+			                <li>Oxygen-18 = Used in paleoclimatology studies</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-9-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/7JSiwEAMZeYqbZJyvc_0F1dKmeU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/fluorineatom-58b602793df78cdcd83d7b50.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Fluorine (Halogens)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 9
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 2s<sup>2</sup> 2p<sup>5</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 19 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1
+			        </div>
+			        <div class="atm-uses">
+			            Fluorine is used in the production of Teflon, refrigerants, and toothpaste.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Fluorine-18 = Used in PET scans</li>
+			                <li>Fluorine-19 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-10-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/AU2vL5mVCKVvPLIqIGniKScaTB0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/neonatom-58b602755f9b5860464c7e5a.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Neon (Noble Gas)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 10
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 2s<sup>2</sup> 2p<sup>6</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 20 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 0
+			        </div>
+			        <div class="atm-uses">
+			            Neon is used in neon signs, high-voltage indicators, and in vacuum tubes.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Neon-20 = Most stable isotope</li>
+			                <li>Neon-21 = Stable isotope</li>
+			                <li>Neon-22 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-11-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/Sl31Gi_9kAmJX98M8H1q3lI-geA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/sodiumatom-58b602715f9b5860464c7a22.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Sodium (Alkali Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 11
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 3s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 23 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1
+			        </div>
+			        <div class="atm-uses">
+			            Sodium is used in the production of soap, glass, and as a cooling agent in nuclear reactors.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Sodium-23 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-12-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/CFRjPrUSjcoQeAyOe9u3v-4t1J8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/magnesiumatom-58b6026b5f9b5860464c7467.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Magnesium (Alkaline Earth Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 12
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 3s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 24 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2
+			        </div>
+			        <div class="atm-uses">
+			            Magnesium is used in the production of alloys, as a fire starter, and in medical treatments for indigestion.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Magnesium-24 = Most stable isotope</li>
+			                <li>Magnesium-25 = Stable isotope</li>
+			                <li>Magnesium-26 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-13-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/MsX9Xff8Hmk6opviudMJ3jJE8oQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/aluminiumatom-58b602655f9b5860464c6f7d.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Aluminum (Post-Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 13
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 3s<sup>2</sup> 3p<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 27 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Aluminum is widely used in the aerospace industry, construction, and in the manufacture of packaging materials.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Aluminum-27 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+
+
+			<div id="atm-14-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/kZfE7-Gqm39-UQ-A5Gpt901eUd8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/siliconatom-58b602613df78cdcd83d63e3.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Silicon (Metalloid)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 14
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 3s<sup>2</sup>3p<sup>2</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 28.085 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 4
+					</div>
+					<div class="atm-uses">
+						Used in semiconductor devices, solar cells, and as a component of concrete.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes:
+						<ol>
+							<li>Si-28 = Most abundant isotope</li>
+							<li>Si-29 = Stable isotope</li>
+							<li>Si-30 = Stable isotope</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div id="atm-15-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/rw4EPZyltI_8XYFTCFuJ7-YXvjk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/phosphorusatom-58b6025c5f9b5860464c65dc.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Phosphorus (Non-Metal)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 15
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 3s<sup>2</sup>3p<sup>3</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 30.974 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 5
+					</div>
+					<div class="atm-uses">
+						Used in fertilizers, detergents, and as an ingredient in matchsticks.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes:
+						<ol>
+							<li>P-31 = Most stable isotope</li>
+							<li>P-32 = Used in radiation therapy and biological studies</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div id="atm-16-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/JUu9k31Fj5NF1siJyNeBPFxCDi8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/sulfuratom-58b602563df78cdcd83d5a9d.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Sulfur (Non-Metal)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 16
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 3s<sup>2</sup>3p<sup>4</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 32.06 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 2, 4, or 6
+					</div>
+					<div class="atm-uses">
+						Used in the production of sulfuric acid, fertilizers, and as a disinfectant.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes:
+						<ol>
+							<li>S-32 = Stable isotope, most abundant</li>
+							<li>S-33 = Stable isotope</li>
+							<li>S-34 = Stable isotope</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div id="atm-17-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/Q0d-ly9yZSiwsyOFW9y3IdZBZMw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/chlorineatom-58b602515f9b5860464c5c02.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Chlorine (Halogen)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 17
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 3s<sup>2</sup>3p<sup>5</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 35.5 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 1
+					</div>
+					<div class="atm-uses">
+						Used in the production of disinfectants, bleaches, and PVC plastic.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes:
+						<ol>
+							<li>Cl-35 = Most abundant isotope</li>
+							<li>Cl-37 = Stable isotope</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div id="atm-18-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/vcYSQ8xASBn7Qqh6DUZLJhRQBIA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/argonatom-58b44b6f5f9b586046e5840d.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Argon (Noble Gas)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 18
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 3s<sup>2</sup>3p<sup>6</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 39.948 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 0
+					</div>
+					<div class="atm-uses">
+						Used in light bulbs, arc welding, and as an inert gas in industrial processes.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes:
+						<ol>
+							<li>Ar-40 = Most abundant isotope</li>
+							<li>Ar-39 = Stable isotope</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="atm-19-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/9ANbbk7eARyyfTiY8C1O39SlKHQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/potassiumatom-58b602485f9b5860464c55ea.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Potassium (Alkali Metal)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 19
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 4s<sup>1</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 39.098 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 1
+					</div>
+					<div class="atm-uses">
+						Used in fertilizers, soap making, and in the manufacture of glass.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes:
+						<ol>
+							<li>K-39 = Most abundant isotope</li>
+							<li>K-40 = Radioactive isotope</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div id="atm-20-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/QtBHXgYSlie6kegV5ZCsHKgVHrs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Calcium-58b602433df78cdcd83d4c16.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Calcium (Alkaline Earth Metal)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 20
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 4s<sup>2</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 40.078 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 2
+					</div>
+					<div class="atm-uses">
+						Used in cement production, steel making, and as a dietary supplement for bone health.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes:
+						<ol>
+							<li>Ca-40 = Most abundant isotope</li>
+							<li>Ca-42 = Stable isotope</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div id="atm-21-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/qVyjw7tPgcrvwvSe1e33it2ZVAU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Scandium-58b6023e3df78cdcd83d49e1.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Scandium (Transition Metal)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 21
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 3d<sup>1</sup>4s<sup>2</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 44.956 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 3
+					</div>
+					<div class="atm-uses">
+						Used in aerospace materials and in some high-performance sports equipment.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes:
+						<ol>
+							<li>Sc-45 = Most abundant isotope</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div id="atm-22-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/Wtngomrhh_0hnBLeByj0Qi55P_w=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Titanium-58b602395f9b5860464c4d8e.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Titanium (Transition Metal)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 22
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 3d<sup>2</sup>4s<sup>2</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 47.867 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 4
+					</div>
+					<div class="atm-uses">
+						Used in aircraft parts, medical implants, and as a strong, corrosion-resistant material.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes:
+						<ol>
+							<li>Ti-48 = Most abundant isotope</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div id="atm-23-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/gkB4841v8_Ppz_SMvGt-qA5qoy4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Vanadium-58b602345f9b5860464c4ae3.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Vanadium (Transition Metal)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 23
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 3d<sup>3</sup>4s<sup>2</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 50.942 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 5
+					</div>
+					<div class="atm-uses">
+						Used in the production of high-strength steel and in certain chemical catalysts.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes:
+						<ol>
+							<li>V-51 = Stable isotope</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+				
+			<div id="atm-24-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/-kwkVY05xuWoe2CUo3gY7S3-GsM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Chromium-58b5c2313df78cdcd8b9d235.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Chromium (Transition Metal)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 24
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 3d<sup>5</sup>4s<sup>1</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 52.00 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 3, 6
+					</div>
+					<div class="atm-uses">
+						Used in stainless steel production, plating, and in many alloys.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes:
+						<ol>
+							<li>Cr-52 = Most abundant isotope</li>
+							<li>Cr-53 = Stable isotope</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div id="atm-25-desc" class="atm-desc hidden-class">
+				<div class="atm-img">
+					<img src="https://www.thoughtco.com/thmb/lStpNT00j9wM-YEDMn9bvIqhtMQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Manganese-58b602295f9b5860464c4532.jpg">
+				</div>
+
+				<div class="atm-written-desc">
+					<div class="atm-name">
+						Name : Manganese (Transition Metal)
+					</div>
+					<div class="atm-number">
+						Atomic Number : 25
+					</div>
+					<div class="atm-electronic-configuration">
+						Valance Shell Configuration : 3d<sup>5</sup>4s<sup>2</sup>
+					</div>
+					<div class="atm-mass">
+						Atomic Mass : 54.938 amu
+					</div>
+					<div class="atm-valancey">
+						Valancey : 7, 4, 2
+					</div>
+					<div class="atm-uses">
+						Used in steel production, batteries, and as a catalyst in chemical reactions.
+					</div>
+					<div class="atm-isotopes">
+						Isotopes:
+						<ol>
+							<li>Mn-55 = Most abundant isotope</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="atm-26-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/mIPLT3KKf0shL7vW4cCi6TRx_tw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Iron-58b602243df78cdcd83d3d5a.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Iron (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 26
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 3d<sup>6</sup> 4s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 56 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2, 3
+			        </div>
+			        <div class="atm-uses">
+			            Iron is used in the production of steel, in machinery, and for construction materials.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Iron-56 = Most abundant isotope</li>
+			                <li>Iron-57 = Stable isotope used in nuclear magnetic resonance</li>
+			                <li>Iron-58 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-27-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/knV-dg-96lI5VdunCugF6piaYIU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Cobalt-58b6021e5f9b5860464c40d8.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Cobalt (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 27
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 3d<sup>7</sup> 4s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 58.9 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2, 3
+			        </div>
+			        <div class="atm-uses">
+			            Cobalt is used in the production of high-performance alloys, magnets, and in batteries.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Cobalt-59 = Stable isotope</li>
+			                <li>Cobalt-60 = Used in radiotherapy</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-28-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/aqKR-Ig2Ekzb2VCVVTA8wP7a4qM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Nickel-58b602195f9b5860464c3e1d.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Nickel (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 28
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 3d<sup>8</sup> 4s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 58.7 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2, 3
+			        </div>
+			        <div class="atm-uses">
+			            Nickel is used in the production of stainless steel, batteries, and as a catalyst in hydrogenation reactions.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Nickel-58 = Most abundant isotope</li>
+			                <li>Nickel-60 = Stable isotope</li>
+			                <li>Nickel-61 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-29-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/tXsbZE_uXzS3IESw2fRC-Yj_jDE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Copper-58b602153df78cdcd83d352e.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Copper (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 29
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 3d<sup>10</sup> 4s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 63.5 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1, 2
+			        </div>
+			        <div class="atm-uses">
+			            Copper is used in electrical wiring, plumbing, and in the production of alloys such as bronze and brass.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Copper-63 = Most stable isotope</li>
+			                <li>Copper-65 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-30-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/_HIvPSxlHNK6LanBwUfHwjqadE0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Zinc-58b6020f3df78cdcd83d332a.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Zinc (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 30
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 3d<sup>10</sup> 4s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 65.4 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2
+			        </div>
+			        <div class="atm-uses">
+			            Zinc is used in galvanizing steel, in batteries, and as an alloy in brass and bronze.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Zinc-64 = Most stable isotope</li>
+			                <li>Zinc-66 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-31-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/doLwiJsTrguwqLB-RQXbu7KeffA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Gallium-58b6020b5f9b5860464c36a7.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Gallium (Post-Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 31
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 3d<sup>10</sup> 4s<sup>2</sup> 4p<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 69.7 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Gallium is used in electronics, solar panels, and as a doping agent in semiconductors.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Gallium-69 = Most stable isotope</li>
+			                <li>Gallium-71 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-32-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/Zm_W9bDLn25lPvm2itC50kK97NM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Germanium-58b602065f9b5860464c3353.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Germanium (Metalloid)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 32
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 3d<sup>10</sup> 4s<sup>2</sup> 4p<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 72.6 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 4
+			        </div>
+			        <div class="atm-uses">
+			            Germanium is used in transistors, infrared optics, and as a semiconductor material.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Germanium-72 = Most stable isotope</li>
+			                <li>Germanium-73 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-33-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/gB2g6875-64pvS4_35Janc7gsn0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Arsenic-58b602013df78cdcd83d2cac.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Arsenic (Metalloid)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 33
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 3d<sup>10</sup> 4s<sup>2</sup> 4p<sup>3</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 74.9 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3, 5
+			        </div>
+			        <div class="atm-uses">
+			            Arsenic is used in the production of semiconductors, in pesticides, and as a wood preservative.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Arsenic-75 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-34-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/qctO0_GoA8CbI847X_eMP_kh_DM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Selenium-58b601fd3df78cdcd83d2a90.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Selenium (Non-Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 34
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 3d<sup>10</sup> 4s<sup>2</sup> 4p<sup>4</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 78.8 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2, 4
+			        </div>
+			        <div class="atm-uses">
+			            Selenium is used in the manufacturing of solar panels, glass production, and as a dietary supplement.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Selenium-74 = Most stable isotope</li>
+			                <li>Selenium-76 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-35-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/TRxgE5McL0k3Z05hlg8Xx7FDgwM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Bromine-58b601f93df78cdcd83d2817.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Bromine (Halogen)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 35
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4s<sup>2</sup> 3d<sup>10</sup> 4p<sup>5</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 79.9 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1
+			        </div>
+			        <div class="atm-uses">
+			            Bromine is used in flame retardants, water purification, and in the manufacture of pesticides.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Bromine-79 = Most stable isotope</li>
+			                <li>Bromine-81 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-36-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/Gwl8uKwrHoamhHeOITvofMJ4n9g=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Krypton-58b601f43df78cdcd83d25c7.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Krypton (Noble Gas)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 36
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 5s<sup>2</sup> 4d<sup>10</sup> 5p<sup>6</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 83.798 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 0
+			        </div>
+			        <div class="atm-uses">
+			            It is used in lighting (e.g., fluorescent lamps), and as a gas in certain types of flash lamps and high-performance light bulbs.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Krypton-78 = Most stable isotope</li>
+			                <li>Krypton-80 = Common in nature</li>
+			                <li>Krypton-82 = Used in medical imaging</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-37-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/g6yjzjYpZnYyXE3G41RO0ArHVzc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Rubidium-58b601ee3df78cdcd83d20d6.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Rubidium (Alkali Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 37
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 5s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 85.4678 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1
+			        </div>
+			        <div class="atm-uses">
+			            Rubidium is used in research and development of special glasses, and in atomic clocks.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Rubidium-85 = Most stable isotope</li>
+			                <li>Rubidium-87 = Used in research for atomic clocks</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+
+			<div id="atm-38-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/8KPj4fWzZWG8BSVpDxxiDmcbkPk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Strontium-58b5c2035f9b586046c8f2bb.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Strontium (Alkaline Earth Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 38
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 5s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 87.62 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2
+			        </div>
+			        <div class="atm-uses">
+			            Strontium is used in fireworks (to produce red colors), in magnets, and in medical imaging.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Strontium-88 = Stable isotope</li>
+			                <li>Strontium-90 = Radioactive, used in power generation</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-39-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/Ioju7Oro0o0c2gXhjRIQIwi7fX8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Yttrium-58b601e53df78cdcd83d1af7.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Yttrium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 39
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 5s<sup>2</sup> 4d<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 88.90585 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Yttrium is used in superconductors, LED lights, and in cancer treatment.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Yttrium-89 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-40-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/R324BKfdLmIslcVnKHuo5TzB4B0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Zirconium-58b601e03df78cdcd83d1948.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Zirconium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 40
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>2</sup> 5s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 91.224 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 4
+			        </div>
+			        <div class="atm-uses">
+			            Zirconium is used in nuclear reactors, and in the production of strong, heat-resistant materials.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Zirconium-90 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-41-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/lPmFLar1b9e-GQeJqm3UcrY0BzQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Niobium-58b601dc5f9b5860464c1b39.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Niobium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 41
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>4</sup> 5s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 92.90638 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 5
+			        </div>
+			        <div class="atm-uses">
+			            Niobium is used in superconducting magnets, aerospace applications, and in steel alloys.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Niobium-93 = Stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-42-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/lmIaV-e_YEuTUQ7vkdWm_MnPX-Y=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Molybdenum-58b601d73df78cdcd83d149f.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Molybdenum (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 42
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>5</sup> 5s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 95.95 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 6
+			        </div>
+			        <div class="atm-uses">
+			            Molybdenum is used in steel production, and in electronics, especially for semiconductor components.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Molybdenum-98 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-43-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/gQO6GGsydbpPJH9-z4Ghsq2EVcc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Technetium-58b601d33df78cdcd83d1289.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Technetium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 43
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>5</sup> 5s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 98 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 7
+			        </div>
+			        <div class="atm-uses">
+			            Technetium is used in medical imaging, especially in radiography and nuclear medicine.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Technetium-99m = Most widely used isotope in medicine</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-44-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/TedZUw2X4Su-WfIaLJTywNCDXfA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Ruthenium-58b601ce5f9b5860464c14df.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Ruthenium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 44
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>7</sup> 5s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 101.07 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3, 4, 5, 6
+			        </div>
+			        <div class="atm-uses">
+			            Ruthenium is used in electronics, automotive catalytic converters, and as a chemical catalyst.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Ruthenium-102 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+			
+			<div id="atm-45-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/sLeKuGgWqGb5_m6V1E27B_IPjqY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Rhodium-58b601ca5f9b5860464c12f6.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Rhodium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 45
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>8</sup> 5s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 102.90550 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3, 4, 5
+			        </div>
+			        <div class="atm-uses">
+			            Rhodium is used in catalytic converters for automobiles, jewelry, and in chemical reactions such as hydrogenation.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Rhodium-103 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-46-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/sZcYrAmSAtboHd1lJm4UvhHjOfQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Palladium-58b601c53df78cdcd83d0a00.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Palladium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 46
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>10</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 106.42 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2, 4
+			        </div>
+			        <div class="atm-uses">
+			            Palladium is used in catalytic converters, hydrogen storage, and in the production of jewelry.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Palladium-106 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-47-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/543fo4vHe1H-YMvstytHvBhpRew=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Silver-58b601c15f9b5860464c0e8f.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Silver (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 47
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>10</sup> 5s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 107.8682 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1, 2
+			        </div>
+			        <div class="atm-uses">
+			            Silver is used in jewelry, mirrors, electronics, and as a monetary metal in coins.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Silver-107 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-48-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/-fTZyXYbsbTY3mdtWtye1a0W0d4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Cadmium-58b601bd5f9b5860464c0cba.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Cadmium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 48
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>10</sup> 5s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 112.411 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2
+			        </div>
+			        <div class="atm-uses">
+			            Cadmium is used in batteries, coatings for steel products, and in solar cells.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Cadmium-114 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-49-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/qRVh2ra_qaNZ-rhHF7CFgUa9oic=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Indium-58b5c2155f9b586046c8f341.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Indium (Post-Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 49
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>10</sup> 5s<sup>2</sup> 5p<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 114.818 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Indium is used in electronics, particularly in semiconductors and LCD screens.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Indium-115 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-50-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/UHqsRlMfzPhFB8m771oBzw3zvA4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Tin-58b601b23df78cdcd83d0197.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Tin (Post-Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 50
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>10</sup> 5s<sup>2</sup> 5p<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 118.710 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2, 4
+			        </div>
+			        <div class="atm-uses">
+			            Tin is used in coatings, alloys (like bronze), and in soldering electronics.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Tin-120 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-51-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/ay75GqvtYE0mWMX417vuobtvCAc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Antimony-58b601ae3df78cdcd83cfea4.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Antimony (Metalloid)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 51
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>10</sup> 5s<sup>2</sup> 5p<sup>3</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 121.760 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3, 5
+			        </div>
+			        <div class="atm-uses">
+			            Antimony is used in flame retardants, batteries, and alloys.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Antimony-121 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-52-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/o6LOfLp_ebbXbN5LjyodC4mS2os=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Tellurium-58b601a93df78cdcd83cfabb.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Tellurium (Metalloid)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 52
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>10</sup> 5s<sup>2</sup> 5p<sup>4</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 127.60 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2, 4, 6
+			        </div>
+			        <div class="atm-uses">
+			            Tellurium is used in electronics, solar panels, and as an alloy in steel.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Tellurium-130 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-53-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/OC31WUxTQpbKTes3wfxnWfCw_DQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Iodine-58b601a35f9b5860464bfeb4.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Iodine (Halogen)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 53
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>10</sup> 5s<sup>2</sup> 5p<sup>5</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 126.90447 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1
+			        </div>
+			        <div class="atm-uses">
+			            Iodine is used in medical imaging, disinfection, and in the production of iodized salt.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Iodine-127 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-54-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/DtXzLsEWU4f2yyavk8DNNJH2Ulk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Xenon-58b6019e3df78cdcd83cf4ad.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Xenon (Noble Gas)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 54
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4d<sup>10</sup> 5s<sup>2</sup> 5p<sup>6</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 131.293 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 0
+			        </div>
+			        <div class="atm-uses">
+			            Xenon is used in high-intensity lamps, ion propulsion systems, and in medical anesthesia.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Xenon-131 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-55-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/8p5ncQoOehZQc5zgtKSFm6GBBYM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Caesium-58b601983df78cdcd83cf1fa.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Cesium (Alkali Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 55
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 6s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 132.905 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1
+			        </div>
+			        <div class="atm-uses">
+			            Cesium is used in atomic clocks, as a getter in vacuum tubes, and in radiation detection.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Cesium-133 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-56-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/m05AmqyGcrzfzGlTP13KRLsCJYA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Barium-58b5c23d5f9b586046c8f541.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Barium (Alkaline Earth Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 56
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 137.327 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2
+			        </div>
+			        <div class="atm-uses">
+			            Barium is used in radiology (contrast media), fireworks, and in making certain types of glass.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Barium-138 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-57-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/WtfOUIo9ABPAF8TnS60kbzDq4kU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Lanthanum-58b6018f3df78cdcd83ced65.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Lanthanum (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 57
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 5d<sup>1</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 138.90547 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Lanthanum is used in batteries, catalysts, and in the production of certain types of glass.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Lanthanum-138 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-58-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/rJ_EQymNFgfEP71ELwBrb-3j9Ho=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Cerium-58b6018a5f9b5860464bf13b.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Cerium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 58
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>1</sup> 5d<sup>1</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 140.116 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3, 4
+			        </div>
+			        <div class="atm-uses">
+			            Cerium is used in catalytic converters, glass polishing, and as a component in certain alloys.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Cerium-140 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-59-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/Y-_3EtaESUCjWcSU-TQO8XeoqLw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Praseodymium-58b601843df78cdcd83ce759.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Praseodymium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 59
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>3</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 140.90766 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3, 4
+			        </div>
+			        <div class="atm-uses">
+			            Praseodymium is used in aircraft engines, magnets, and as an alloy in steel.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Praseodymium-141 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-60-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/LEKAQvaknBLoLhrr2g8ksVVOB-A=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Neodymium-58b6017f5f9b5860464bec6a.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Neodymium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 60
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>4</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 144.242 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Neodymium is used in the production of strong permanent magnets, laser equipment, and in catalysts.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Neodymium-144 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-61-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/WSRFea9YOBroh2egY6WkEw456K8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Promethium-58b6017a3df78cdcd83ce164.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Promethium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 61
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>5</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 145 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Promethium is used in atomic batteries, phosphorescent coatings, and in research.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Promethium-145 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-62-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/_A-qehPOk6XFER0i53k_0AV3fnk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Samarium-58b601743df78cdcd83cddbe.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Samarium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 62
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>6</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 150.36 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Samarium is used in magnets, nuclear reactors, and as a catalyst in chemical reactions.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Samarium-152 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-63-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/ltxMArVHbORFHQRgq-u-tWYBjlw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Europium-58b6016e3df78cdcd83cdb23.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Europium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 63
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>7</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 151.964 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Europium is used in phosphorescent and fluorescent applications, such as in color TV tubes and energy-efficient light bulbs.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Europium-153 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-64-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/KFWUH2mr-AfrDaNp85-a7880qcI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Gadolinium-58b6016a5f9b5860464bdfdc.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Gadolinium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 64
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>7</sup> 5d<sup>1</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 157.25 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Gadolinium is used in MRI contrast agents, neutron capture, and as a heat shield in nuclear reactors.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Gadolinium-157 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-65-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/ALA2Tj7E-khSIPIVJiZucAJaiVA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Terbium-58b601653df78cdcd83cd594.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Terbium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 65
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>9</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 158.92535 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Terbium is used in solid-state devices, in phosphors for fluorescent lamps, and in the production of magnets.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Terbium-159 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-66-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/sYeWBf93VP8nNZKnAXokHTfqbw8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Dysprosium-58b601605f9b5860464bd9df.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Dysprosium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 66
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>10</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 162.500 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Dysprosium is used in magnets, lasers, and in nuclear reactors as a neutron absorber.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Dysprosium-164 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-67-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/kfsJDHdJe0SUPa-j4hZzp5kyiR0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Holmium-58b6015b5f9b5860464bd78f.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Holmium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 67
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>11</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 164.93033 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Holmium is used in high-strength magnets, in lasers, and in nuclear reactors.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Holmium-165 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-68-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/JrdfHUdk2ECeu8eNmZXZRaKb744=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Erbium-58b601565f9b5860464bd562.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Erbium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 68
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>12</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 167.259 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Erbium is used in fiber-optic communications, medical lasers, and in making nuclear fuel.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Erbium-167 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-69-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/yLvOfFj9vb_huhdHjJVN_VmED-s=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Thulium-58b601513df78cdcd83ccbd2.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Thulium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 69
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>13</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 168.93422 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Thulium is used in medical imaging, as a laser material, and in certain types of magnets.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Thulium-169 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+	
+			<div id="atm-70-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/V7QcuRg8rjaai0EMQ6PmYNHx3zY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Ytterbium-58b6014c5f9b5860464bcf6d.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Ytterbium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 70
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>14</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 173.04 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Ytterbium is used in fiber-optic communications, high-performance alloys, and in nuclear medicine.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Ytterbium-174 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-71-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/nloVQCU-IZkSBoNyIkoQRJP3IPM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Lutetium-58b601473df78cdcd83cc606.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Lutetium (Lanthanide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 71
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>14</sup> 5d<sup>1</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 174.9668 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Lutetium is used in positron emission tomography (PET) scanners, and in high-performance catalysts.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Lutetium-175 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-72-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/EVEGdX2o3MyXgV0hu7HqyBHxZAQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Hafnium-58b601425f9b5860464bc918.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Hafnium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 72
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>14</sup> 5d<sup>2</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 178.49 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 4
+			        </div>
+			        <div class="atm-uses">
+			            Hafnium is used in nuclear reactors, in making high-temperature alloys, and in the production of semiconductors.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Hafnium-178 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-73-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/ooGvxT-c4qFDRtuMnYL1gEsMS4I=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Tantalum-58b6013c3df78cdcd83cc000.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Tantalum (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 73
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>14</sup> 5d<sup>3</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 180.94788 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 5
+			        </div>
+			        <div class="atm-uses">
+			            Tantalum is used in the production of capacitors, in the aerospace industry, and in surgical instruments.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Tantalum-180 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-74-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/qJgK-08lloCAjUtmCn82c-L8QOM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Tungsten-58b601373df78cdcd83cbc93.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Tungsten (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 74
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>14</sup> 5d<sup>4</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 183.84 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 6
+			        </div>
+			        <div class="atm-uses">
+			            Tungsten is used in light bulb filaments, in high-strength steel alloys, and in aerospace applications due to its high melting point.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Tungsten-184 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-75-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/2PkKpBO1zBDHUYmna4NWJO2whFo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Rhenium-58b6012b5f9b5860464bbcaa.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Rhenium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 75
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>14</sup> 5d<sup>5</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 186.207 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 7
+			        </div>
+			        <div class="atm-uses">
+			            Rhenium is used in high-performance superalloys, in catalysts, and in thermocouples.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Rhenium-185 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-76-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/7JWlS_sMERKocZu1sFXNu_i1nkQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Osmium-58b601263df78cdcd83cb2c4.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Osmium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 76
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>14</sup> 5d<sup>6</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 190.23 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 4, 6
+			        </div>
+			        <div class="atm-uses">
+			            Osmium is used in fountain pen tips, electrical contacts, and in the manufacturing of high-strength alloys.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Osmium-192 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-77-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/mJju_L_vDLv3A3Ie2NVxn06nEjI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Iridium-58b601215f9b5860464bb6e9.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Iridium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 77
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>14</sup> 5d<sup>7</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 192.217 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3, 4
+			        </div>
+			        <div class="atm-uses">
+			            Iridium is used in spark plugs, in the aerospace industry, and in high-temperature applications.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Iridium-191 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-78-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/ikc5X-49cig3p7gxJR4VyMC54fA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Platinum-58b6011c5f9b5860464bb4e8.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Platinum (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 78
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>14</sup> 5d<sup>9</sup> 6s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 195.084 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2, 4
+			        </div>
+			        <div class="atm-uses">
+			            Platinum is used in catalytic converters, in jewelry, and in various chemical reactions.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Platinum-195 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-79-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/PNi2SsV6Vk-yrUNZAkFJuyaJlak=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Gold-58b601163df78cdcd83caa83.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Gold (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 79
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>14</sup> 5d<sup>10</sup> 6s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 196.966569 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1, 3
+			        </div>
+			        <div class="atm-uses">
+			            Gold is used in jewelry, electronics, and as a form of currency.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Gold-197 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-80-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/8OATCKbkBCyQbAUgRBO5WgyVWVk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Mercury-58b601125f9b5860464baf39.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Mercury (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 80
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : 4f<sup>14</sup> 5d<sup>10</sup> 6s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 200.592 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2
+			        </div>
+			        <div class="atm-uses">
+			            Mercury is used in thermometers, barometers, and electrical switches.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Mercury-202 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-81-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/LGytcdatYHbJtuyMjSljRWCJH1I=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Thallium-58b6010d5f9b5860464bac8b.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Thallium (Post-Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 81
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Xe] 4f<sup>14</sup> 5d<sup>10</sup> 6s<sup>2</sup> 6p<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 204.38 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1, 3
+			        </div>
+			        <div class="atm-uses">
+			            Thallium is used in the production of infrared detectors, in semiconductors, and as a poison in rodenticides.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Thallium-203 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-82-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/_Tml4iChSKMXEtOAVlUDCKBWL2c=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Lead-58b601095f9b5860464ba934.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Lead (Post-Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 82
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Xe] 4f<sup>14</sup> 5d<sup>10</sup> 6s<sup>2</sup> 6p<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 207.2 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2, 4
+			        </div>
+			        <div class="atm-uses">
+			            Lead is used in batteries (especially lead-acid batteries), shielding from radiation, and in lead-based paints (though now mostly phased out).
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Lead-208 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-83-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/xoMLL1gSlmRE8l-iqI69oN01g4w=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Bismuth-58b601035f9b5860464ba6d6.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Bismuth (Post-Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 83
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Xe] 4f<sup>14</sup> 5d<sup>10</sup> 6s<sup>2</sup> 6p<sup>3</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 208.98040 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3, 5
+			        </div>
+			        <div class="atm-uses">
+			            Bismuth is used in cosmetics, pharmaceuticals (e.g., Pepto-Bismol), and as a replacement for lead in various applications.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Bismuth-209 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-84-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/H_t37uR5I24cWOsOkLaq7siTEUg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Polonium-58b600ff3df78cdcd83c9e23.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Polonium (Chalcogen)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 84
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Xe] 4f<sup>14</sup> 5d<sup>10</sup> 6s<sup>2</sup> 6p<sup>4</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 209.982873 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2, 4
+			        </div>
+			        <div class="atm-uses">
+			            Polonium is used in antistatic devices, in nuclear research, and historically in radioactive thermoelectric power generators.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Polonium-210 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-85-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/ibRouyDeWtH9tMkKFbhGepJi8Jc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Astatine-58b600fa3df78cdcd83c9bd5.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Astatine (Halogen)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 85
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Xe] 4f<sup>14</sup> 5d<sup>10</sup> 6s<sup>2</sup> 6p<sup>5</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 210 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1, 3, 5, 7
+			        </div>
+			        <div class="atm-uses">
+			            Astatine is used in targeted alpha-particle cancer therapy, though it is extremely rare and highly radioactive.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Astatine-210 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-86-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/XYkdSVtzip8_6QZfWYP9-hIHjcw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Radon-58b600f55f9b5860464b9fc0.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Radon (Noble Gas)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 86
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Xe] 4f<sup>14</sup> 5d<sup>10</sup> 6s<sup>2</sup> 6p<sup>6</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 222 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 0
+			        </div>
+			        <div class="atm-uses">
+			            Radon is used in radiation therapy for cancer, though it is highly toxic and radioactive.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Radon-222 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-87-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/2S2V_9nUjHFifmSrgoiat5HJ2dQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Francium-58b600ef3df78cdcd83c96a2.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Francium (Alkali Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 87
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 7s<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 223 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 1
+			        </div>
+			        <div class="atm-uses">
+			            Francium is highly radioactive and has no significant commercial uses due to its rarity and instability.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Francium-223 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-88-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/QonFj_F0HZucca-1CLA10c33Nt4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/radiumelectronshell-58b600ea3df78cdcd83c930f.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Radium (Alkaline Earth Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 88
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 226 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 2
+			        </div>
+			        <div class="atm-uses">
+			            Radium was historically used in luminescent paints, though its use has been largely discontinued due to health risks.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Radium-226 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-89-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/8g3YgHnDLEVaIHwH07d91wHv0O4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Actinium-58b600e45f9b5860464b8b75.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Actinium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 89
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 227 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Actinium is used in radiation therapy and as a neutron source for research purposes.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Actinium-227 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-90-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/S-m-6L0rfzFSMbCTaFqA7VMCg4g=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Thorium-58b600de5f9b5860464b81a8.jpg">
+			    </div>
+
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Thorium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 90
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 6d<sup>2</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 232.038 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 4
+			        </div>
+			        <div class="atm-uses">
+			            Thorium is used in nuclear reactors and as an alloy in aircraft engines.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Thorium-232 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-91-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/7q4DnQo4PP2QwEFZnNMS-ylf3gw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Protactinium-58b600d93df78cdcd83c75a3.jpg">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Protactinium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 91
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>2</sup> 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 231.03588 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 5
+			        </div>
+			        <div class="atm-uses">
+			            Protactinium is used in nuclear reactors and is a part of nuclear fuel cycles.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Protactinium-231 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-92-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/gEU9dJmhF_g_W_zjXi3Nt-oa0M4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Uranium-58b600d43df78cdcd83c6dd1.jpg">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Uranium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 92
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>3</sup> 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 238.02891 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 6
+			        </div>
+			        <div class="atm-uses">
+			            Uranium is used as nuclear fuel and in the production of nuclear weapons.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Uranium-238 = Most abundant isotope</li>
+			                <li>Uranium-235 = Used in nuclear reactors</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-93-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/dTiTkravsWvt9VrJmB29ET7pCDQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/neptuniumelectronshell-58b600cd3df78cdcd83c5e29.jpg">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Neptunium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 93
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>4</sup> 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 237.0482 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 5, 6
+			        </div>
+			        <div class="atm-uses">
+			            Neptunium is used in the production of plutonium and is studied for use in nuclear reactors.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Neptunium-239 = Most studied isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-94-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/b5DIY5MJ8UGrz6-j78O_hlv9iE8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Plutonium-58b600bf3df78cdcd83c4408.jpg">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Plutonium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 94
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>6</sup> 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 244.0642 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 5, 6
+			        </div>
+			        <div class="atm-uses">
+			            Plutonium is used as a nuclear fuel and in the production of nuclear weapons.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Plutonium-239 = Used in nuclear reactors and weapons</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-95-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfAny3j7LPoCT3Bw1I2wJrVSxR20jzNiQIpg&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Americium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 95
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>7</sup> 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 243.0614 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3, 4
+			        </div>
+			        <div class="atm-uses">
+			            Americium is used in smoke detectors and in radiography.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Americium-241 = Commonly used isotope in smoke detectors</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-96-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFSyL_TrSlVNW7x9HMCIQ3AhE7ZyiZnrNs3g&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Curium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 96
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>7</sup> 6d<sup>2</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 247.0703 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3, 4
+			        </div>
+			        <div class="atm-uses">
+			            Curium is used in research and has applications in nuclear reactors and space missions.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Curium-244 = Most commonly used isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-97-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvU04O1Tq9kur3NIFJF0im-BYHF5daA37cgA&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Berkelium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 97
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>9</sup> 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 247.0703 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Berkelium is primarily used for scientific research and as a precursor for the production of other actinides.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Berkelium-247 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-98-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://www.thoughtco.com/thmb/RVvodXHvXoVgow5plmMqDVgV44o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Californium-56a12bc03df78cf772681557.jpg">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Californium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 98
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>10</sup> 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 251.0804 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Californium is used in neutron radiography and as a neutron source in scientific research.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Californium-252 = Used in neutron sources</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-99-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2OU7jVslxJpjyX-8ORprnAr915EDHLOvqqw&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Einsteinium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 99
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>11</sup> 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 252.0829 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Einsteinium is used in scientific research, primarily in the synthesis of heavier elements.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Einsteinium-253 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-100-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Electron_shell_100_Fermium.svg/1200px-Electron_shell_100_Fermium.svg.png">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Fermium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 100
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>12</sup> 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 257.0951 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Fermium is used for scientific research in nuclear chemistry.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Fermium-257 = Most studied isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-101-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://media.istockphoto.com/id/1922410662/vector/atomic-structure-of-mendelevium-with-atomic-number-atomic-mass-and-energy-levels.jpg?s=612x612&w=0&k=20&c=SDosESOPlNcsYOScElK6Z3Aj4XpXLb98pVdFxgzjiBc=">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Mendelevium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 101
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>13</sup> 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 258.0984 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Mendelevium is used in scientific research, particularly in the study of heavier elements.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Mendelevium-258 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-102-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFNr_x4AhdqwH6YRDdStLLppkhg6tS1nLObA&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Nobelium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 102
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 259.1011 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Nobelium is primarily used in nuclear research and for creating heavier elements.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Nobelium-259 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-103-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://metals.comparenature.com/PImg/Electron-Configuration-of-Lawrencium82Med_300.jpg">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Lawrencium (Actinide)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 103
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>1</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 262.1141 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Lawrencium is used in experimental research, particularly for synthesizing heavier elements.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Lawrencium-262 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-104-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA5yC1sw1hAugPLRbft_YA2tCElpouDgTLmA&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Rutherfordium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 104
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>2</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 267.1213 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 4
+			        </div>
+			        <div class="atm-uses">
+			            Rutherfordium is used in advanced research on the properties of heavy elements.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Rutherfordium-267 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-105-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRskAyc7xvfkK9kecJFzmhMOhFJU0VESZvTzw&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Dubnium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 105
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>3</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 270.1235 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 5
+			        </div>
+			        <div class="atm-uses">
+			            Dubnium is used in nuclear research and the study of superheavy elements.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Dubnium-270 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-106-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_kQADxD60bWMXLRnRcWUVtN8kYZzWEm-yBA&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Seaborgium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 106
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>4</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 271.1338 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 6
+			        </div>
+			        <div class="atm-uses">
+			            Seaborgium is used in nuclear chemistry for research on the properties of heavy elements.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Seaborgium-271 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-107-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq0aa5O1jRcUiI80yR8yAZjdHO4DF2jzE3rQ&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Bohrium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 107
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>5</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 270.1338 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 7
+			        </div>
+			        <div class="atm-uses">
+			            Bohrium is mainly used for experimental purposes in heavy element research.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Bohrium-270 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-108-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Electron_shell_108_Hassium.svg/1200px-Electron_shell_108_Hassium.svg.png">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Hassium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 108
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>6</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 277.1381 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 8
+			        </div>
+			        <div class="atm-uses">
+			            Hassium is used in nuclear chemistry and to explore the chemistry of superheavy elements.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Hassium-277 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-109-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Electron_shell_109_Meitnerium.svg/640px-Electron_shell_109_Meitnerium.svg.png">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Meitnerium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 109
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>7</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 278.1388 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 9
+			        </div>
+			        <div class="atm-uses">
+			            Meitnerium is used in the field of superheavy element chemistry.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Meitnerium-278 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-110-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm0_d0xJnJp2bO_M3S9DeL1yzrcrFGeaTZ6Q&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Darmstadtium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 110
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>9</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 281.1390 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 10
+			        </div>
+			        <div class="atm-uses">
+			            Darmstadtium is used for advanced research in the field of nuclear physics.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Darmstadtium-281 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-111-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://i.pinimg.com/736x/43/3a/85/433a855d804e06d403651af4c120316a.jpg">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Roentgenium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 111
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>10</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 280.1444 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 11
+			        </div>
+			        <div class="atm-uses">
+			            Roentgenium is primarily used in experimental nuclear physics research. Its high atomic number makes it useful for studying the properties of superheavy elements and investigating the limits of the periodic table. Due to its extreme instability, it does not have practical applications outside of the laboratory.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Roentgenium-280 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-112-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr2puIf7pJQrh2BTamRgucKudADi8h7l1ehw&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Copernicium (Transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 112
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>10</sup> 7s<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 285.1605 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 12
+			        </div>
+			        <div class="atm-uses">
+			            Copernicium is used primarily in nuclear chemistry research, particularly in studies involving the synthesis of superheavy elements. Due to its extremely short half-life, Copernicium has no commercial applications and is typically studied in controlled laboratory settings to explore the properties of heavy elements and their isotopes.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Copernicium-285 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-113-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSncB5usuEzYtCBAS-D6RuQP2ZhzxID3FIZfg&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Nihonium (Post-transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 113
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>10</sup> 7p<sup>1</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 284.1707 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Nihonium is primarily of interest for scientific research, especially for synthesizing heavier elements and studying their properties. Like other superheavy elements, it is highly unstable, with extremely short-lived isotopes, and is used to expand our understanding of nuclear physics and the structure of the periodic table.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Nihonium-284 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-114-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Electron_shell_114_Flerovium.svg">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Flerovium (Post-transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 114
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>10</sup> 7p<sup>2</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 289.1809 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 4
+			        </div>
+			        <div class="atm-uses">
+			            Flerovium is used in scientific research, particularly in the synthesis of heavier elements and the study of nuclear stability. Like many superheavy elements, it is not found in nature and must be artificially created in particle accelerators. Its uses are limited to experimental purposes, contributing to the understanding of the nuclear structure and atomic theory.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Flerovium-289 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-115-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Electron_shell_115_Moscovium_-_no_label.svg">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Moscovium (Post-transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 115
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>10</sup> 7p<sup>3</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 288.1907 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 3
+			        </div>
+			        <div class="atm-uses">
+			            Moscovium is used in nuclear research to study the behavior of superheavy elements. It plays a key role in expanding the periodic table and understanding the properties of the heaviest known elements. The isotopes of Moscovium are highly unstable and decay rapidly, making it useful for advancing knowledge in nuclear physics and chemistry.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Moscovium-288 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-116-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Electron_shell_116_Livermorium.svg">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Livermorium (Post-transition Metal)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 116
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>10</sup> 7p<sup>4</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 293.2041 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 4
+			        </div>
+			        <div class="atm-uses">
+			            Livermorium is primarily used in the research of nuclear reactions and the study of superheavy elements. Its isotopes are extremely unstable, and it does not have practical applications outside of advanced nuclear chemistry laboratories. It helps scientists explore the theoretical limits of the periodic table.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Livermorium-293 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-117-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrOcekl7ltZY3eOjwn1_vuf46c0KfA3LbQcw&s">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Tennessine (Halogen)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 117
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>10</sup> 7p<sup>5</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 294.2103 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 7
+			        </div>
+			        <div class="atm-uses">
+			            Tennessine is used mainly in nuclear research. Due to its highly radioactive and unstable isotopes, it does not have commercial applications. It contributes to the exploration of the properties of superheavy elements and the study of chemical bonding and reactivity of halogens in this part of the periodic table.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Tennessine-294 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+			<div id="atm-118-desc" class="atm-desc hidden-class">
+			    <div class="atm-img">
+			        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Electron_shell_118_Oganesson.svg">
+			    </div>
+			    <div class="atm-written-desc">
+			        <div class="atm-name">
+			            Name : Oganesson (Noble Gas)
+			        </div>
+			        <div class="atm-number">
+			            Atomic Number : 118
+			        </div>
+			        <div class="atm-electronic-configuration">
+			            Valance Shell Configuration : [Rn] 5f<sup>14</sup> 6d<sup>10</sup> 7p<sup>6</sup>
+			        </div>
+			        <div class="atm-mass">
+			            Atomic Mass : 294.2140 amu
+			        </div>
+			        <div class="atm-valancey">
+			            Valancey : 8
+			        </div>
+			        <div class="atm-uses">
+			            Oganesson is a synthetic element with no practical applications due to its extreme instability, but it is primarily used for theoretical research to investigate the behavior of noble gases at superheavy atomic numbers. Its properties are studied to further our understanding of the possible existence of elements beyond Oganesson.
+			        </div>
+			        <div class="atm-isotopes">
+			            Isotopes: 
+			            <ol>
+			                <li>Oganesson-294 = Most stable isotope</li>
+			            </ol>
+			        </div>
+			    </div>
+			</div>
+
+
+
+
+		</div>
+
+		</div>
+
+	</div>
+
+
+<div id="highlighter-container-label" style="display:none;">
+
+	<div id="highlighter-label-2" class="type-highlighter-label hidden-class">
+		<div id="alakli-metal-highlight" class="specific-highlight-container">
+			
+			<div id="alkali-metal-highlight-color" class="highlight-color-container"></div>
+			<div>Alkali Metals</div>
+
+		</div>
+
+		<div id="earth-alkali-metal-highlight" class="specific-highlight-container">
+			
+			<div id="earth-alkali-metal-highlight-color" class="highlight-color-container"></div>
+			<div>Earth Alkali Metals</div>
+
+		</div>
+
+		<div id="transition-highlight" class="specific-highlight-container">
+			
+			<div id="transition-highlight-color" class="highlight-color-container"></div>
+			<div>Transitional Metals</div>
+
+		</div>
+
+		<div id="post-transition-highlight" class="specific-highlight-container">
+			<div id="post-transition-highlight-color" class="highlight-color-container"></div>
+			<div>Post Transitional Metals</div>
+		</div>
+
+		<div id="metalloid-highlight" class="specific-highlight-container">
+			<div id="metalloid-highlight-color" class="highlight-color-container"></div>
+			<div>Metalloids</div>
+		</div>
+
+		<div id="non-metal-highlight" class="specific-highlight-container">
+			<div id="non-metal-highlight-color" class="highlight-color-container"></div>
+			<div>Non-Metals</div>
+		</div>
+
+		<div id="halogen-highlight" class="specific-highlight-container">
+			<div id="halogen-highlight-color" class="highlight-color-container"></div>
+			<div>Halogens</div>
+		</div>
+
+		<div id="inert-gases-highlight" class="specific-highlight-container">
+			
+			<div id="inert-gases-highlight-color" class="highlight-color-container"></div>
+			<div>Inert/Noble Gases</div>
+
+		</div>
+
+		<div id="lanthanides-highlight" class="specific-highlight-container">
+			<div id="lanthanides-highlight-color" class="highlight-color-container"></div>
+			<div>Lanthanides</div>
+			
+		</div>
+
+		<div id="actanides-highlight" class="specific-highlight-container">
+			<div id="actanides-highlight-color" class="highlight-color-container"></div>
+			<div>Actanides</div>
+			
+		</div>
+
+
+	</div>
+
+
+	<div id="highlighter-label-1" class="type-highlighter-label">
+
+		<div id="s-block-highlight" class="specific-highlight-container">
+			
+			<div id="s-block-highlight-color" class="highlight-color-container"></div>
+			<div>S-block Elements</div>
+
+		</div>
+
+		<div id="p-block-highlight" class="specific-highlight-container">
+
+			<div id="p-block-highlight-color" class="highlight-color-container"></div>
+			<div>P-block Elements</div>
+
+		</div>
+
+		<div id="d-block-highlight" class="specific-highlight-container">
+			
+			<div id="d-block-highlight-color" class="highlight-color-container"></div>
+			<div>D-block Elements</div>
+
+		</div>
+
+		<div id="f-block-highlight" class="specific-highlight-container">
+			
+			<div id="f-block-highlight-color" class="highlight-color-container"></div>
+			<div>F-block Elements</div>
+
+		</div>
+	</div>
+
+</div>
+
+<script>
+	
+
+setTimeout(ShowMainScreen, 2500);
+
+function ShowMainScreen() {
+	let loadingScreen = document.getElementById("loading-screen-container");
+	let navBar = document.getElementById("nav-bar-container");
+	let mainScreen = document.getElementById('main-main-container');
+	let labels = document.getElementById("highlighter-container-label");
+	let MenuButtonElement = document.getElementById('menu-open-button'); 
+
+	loadingScreen.style.display = 'none';
+	navBar.style.display = 'block';
+	mainScreen.style.display = 'grid';
+	labels.style.display = 'flex';
+	MenuButtonElement.style.display = "block";
+}
+
+function ShowInfo(atomId) {
+	let AtmNumberDesc = atomId + "-desc";
+	let AtmNumberDescContainer = document.getElementById(AtmNumberDesc);
+	
+	ShowElementDescContainer();
+	AtmNumberDescContainer.classList.remove('hidden-class');
+}
+
+function ShowMenu(){
+	let MenuElement = document.getElementById('menu');
+	let MenuItems = document.getElementById('menu-inside-container');
+
+	MenuElement.classList.remove('menu-class-hidden');
+	MenuElement.classList.add('menu-class-show');
+	
+	MenuItems.style.display = 'block';
+}
+
+function HideMenu(){
+	let MenuElement = document.getElementById('menu');
+	let MenuItems = document.getElementById('menu-inside-container');
+	
+	MenuItems.style.display = 'none';
+	MenuElement.classList.remove('menu-class-show');
+	MenuElement.classList.add('menu-class-hidden');
+}
+
+
+
+function ShowElementDescContainer(){
+	let ElementInfoContainerBackground = document.getElementById('element-info-container-background');
+	let ElementInfoContainer = document.getElementById("element-info-container");
+	ElementInfoContainer.classList.remove("hide-element-disc-container-background");
+	ElementInfoContainerBackground.classList.remove("hide-element-disc-container-background");
+	ElementInfoContainerBackground.classList.add("show-element-disc-container-background");
+}
+
+
+function HideElementDescContainer(){
+	let ElementInfoContainerBackground = document.getElementById('element-info-container-background');
+	let ElementInfoContainer = document.getElementById("element-info-container");
+
+	ElementInfoContainer.classList.add("hide-element-disc-container-background");
+	ElementInfoContainerBackground.classList.remove('show-element-disc-container-background');
+	ElementInfoContainerBackground.classList.add("hide-element-disc-container-background");
+
+	HideAllElementDesc();
+	
+
+}
+
+function HideAllElementDesc() {
+	for (var i = 1; i < 119; i++) {
+		let element_id = "atm-" + i + "-desc";
+		let element = document.getElementById(element_id);
+		
+		if (element){
+			element.classList.add("hidden-class");
+		}
+	}
+}
+
+function HideAllElementLabel(){
+	for (var i = 1; i < 4; i++) {
+		let element_id = "highlighter-label-" + i;
+		let element = document.getElementById(element_id);
+
+		if (element) {
+			element.classList.add("hidden-class");
+		}
+	}
+
+	let label_activator = document.getElementsByClassName("nav-button");
+	for (var i = 0; i < label_activator.length; i++) {
+		label_activator[i].classList.remove("bg-green");
+	}
+
+	{
+		let element_bg_red = document.querySelectorAll("a.bg-red");
+		for (var i = 0; i < element_bg_red.length; i++) {
+			element_bg_red[i].classList.remove("bg-red");
+		}
+
+		let element_bg_lightpink = document.querySelectorAll("a.bg-lightpink");
+		for (var i = 0; i < element_bg_lightpink.length; i++) {
+			element_bg_lightpink[i].classList.remove("bg-lightpink");
+		}
+
+		let element_bg_cyan = document.querySelectorAll("a.bg-cyan");
+		for (var i = 0; i < element_bg_cyan.length; i++) {
+			element_bg_cyan[i].classList.remove("bg-cyan");
+		}
+
+		let element_bg_lime = document.querySelectorAll("a.bg-lime");
+		for (var i = 0; i < element_bg_lime.length; i++) {
+			element_bg_lime[i].classList.remove("bg-cyan");
+		}
+
+		let element_bg_lightgreen = document.querySelectorAll("a.bg-lightgreen");
+		for (var i = 0; i < element_bg_lightgreen.length; i++) {
+			element_bg_lightgreen[i].classList.remove("bg-lightgreen");
+		}
+
+		let element_bg_green = document.querySelectorAll("a.bg-green");
+		for (var i = 0; i < element_bg_green.length; i++) {
+			element_bg_green[i].classList.remove("bg-green")
+		}
+
+		let element_bg_blue = document.querySelectorAll("a.bg-blue");
+		for (var i = 0; i < element_bg_blue.length; i++) {
+			element_bg_blue[i].classList.remove("bg-blue");
+		}
+
+		let element_bg_lightblue = document.querySelectorAll("a.bg-lightblue");
+		for (var i = 0; i < element_bg_lightblue.length; i++) {
+			element_bg_lightblue[i].classList.remove("bg-lightblue");	
+		}
+
+		let element_bg_orange = document.querySelectorAll("a.bg-orange");
+		for (var i = 0; i < element_bg_orange.length; i++) {
+			element_bg_orange[i].classList.remove("bg-orange");
+		}
+
+		let element_bg_yellow = document.querySelectorAll("a.bg-yellow");
+		for (var i = 0; i < element_bg_yellow.length; i++) {
+			element_bg_yellow[i].classList.remove("bg-yellow");	
+		}
+
+		let element_bg_lightpurple = document.querySelectorAll("a.bg-lightpurple");
+		for (var i = 0; i < element_bg_lightpurple.length; i++) {
+			element_bg_lightpurple[i].classList.remove("bg-lightpurple");
+		}
+
+		let element_bg_verylightyellow = document.querySelectorAll("a.bg-verylightyellow");
+		for (var i = 0; i < element_bg_verylightyellow.length; i++) {
+			element_bg_verylightyellow[i].classList.remove("bg-verylightyellow")
+		}
+
+		let element_bg_whitesmoke = document.querySelectorAll("a.bg-whitesmoke");
+		for (var i = 0; i < element_bg_whitesmoke.length; i++) {
+			element_bg_whitesmoke[i].classList.remove("bg-whitesmoke");
+		}
+	}
+}
+
+
+function ShowLabel(highlighter_number){
+	let label_id = "highlighter-label-" + highlighter_number;
+	let labelElement = document.getElementById(label_id);
+
+	HideAllElementLabel();
+	labelElement.classList.remove("hidden-class");
+
+	let labelButton_id = "highlighter-label-" + highlighter_number + "-activator";
+	let labelButton = document.getElementById(labelButton_id);
+	labelButton.classList.add("bg-green");
+
+
+	//labeling/coloring the elements in the table
+	let element_lanthanide = document.getElementsByClassName("lanth");
+	for (var i = 0; i < element_lanthanide.length; i++) {
+		element_lanthanide[i].classList.add("bg-red");
+	}
+
+	let element_actanide = document.getElementsByClassName("acta");
+	for (var i = 0; i < element_actanide.length; i++) {
+		element_actanide[i].classList.add("bg-red");
+	}
+
+	if (highlighter_number == 1){
+
+		let element_s = document.querySelectorAll("a.s-block");
+		for (var i = 0; i < element_s.length; i++) {
+			element_s[i].classList.add("bg-lightgreen");
+		}
+
+		let element_p = document.querySelectorAll("a.p-block");
+		for (var i = 0; i < element_p.length; i++) {
+			element_p[i].classList.add("bg-lightblue");
+		}
+
+		let element_d = document.querySelectorAll("a.d-block");
+		for (var i = 0; i < element_d.length; i++) {
+			element_d[i].classList.add("bg-orange");
+		}
+
+		let element_f = document.querySelectorAll("a.f-block");
+		for (var i = 0; i < element_f.length; i++) {
+			element_f[i].classList.add("bg-yellow");
+		}
+
+	}
+
+	if (highlighter_number == 2) {
+
+		let element_alkali_metal = document.querySelectorAll("a.alkali-metal");
+		for (var i = 0; i < element_alkali_metal.length; i++) {
+			element_alkali_metal[i].classList.add("bg-blue");
+		}
+
+		let element_earth_metal = document.querySelectorAll("a.earth-alkali-metal");
+		for (var i = 0; i < element_earth_metal.length; i++) {
+			element_earth_metal[i].classList.add("bg-whitesmoke");
+		}
+
+		let element_transition = document.querySelectorAll("a.transition");
+		for (var i = 0; i < element_transition.length; i++) {
+			element_transition[i].classList.add("bg-cyan");
+		}
+
+		let element_post_transition = document.querySelectorAll("a.post-transition");
+		for (var i = 0; i < element_post_transition.length; i++) {
+			element_post_transition[i].classList.add("bg-lightpink");
+		}
+
+		let element_non_metal = document.querySelectorAll("a.non-metal");
+		for (var i = 0; i < element_non_metal.length; i++) {
+			element_non_metal[i].classList.add("bg-lightblue");
+		}
+
+		let element_metalloid = document.querySelectorAll("a.metalloid");
+		for (var i = 0; i < element_metalloid.length; i++) {
+			element_metalloid[i].classList.add("bg-orange");	
+		}
+
+		let element_halogen = document.querySelectorAll("a.halogen");
+		for (var i = 0; i < element_halogen.length; i++) {
+			element_halogen[i].classList.add("bg-lightgreen");
+		}
+
+		let element_inert_gas = document.querySelectorAll("a.inert-gas");
+		for (var i = 0; i < element_inert_gas.length; i++) {
+			element_inert_gas[i].classList.add("bg-yellow");
+		}
+
+		let element_lanthanide = document.querySelectorAll("a.lanthanides");
+		for (var i = 0; i < element_lanthanide.length; i++) {
+			element_lanthanide[i].classList.add("bg-verylightyellow")
+		}
+
+		let element_actanide = document.querySelectorAll("a.actanides");
+		for (var i = 0; i < element_actanide.length; i++) {
+			element_actanide[i].classList.add("bg-lightpurple");
+		}
+	}
+}
+
+
+
+</script>
+</body>
+</html>

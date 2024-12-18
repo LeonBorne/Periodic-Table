@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modern Periodic Table</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="icon" href="logo.png">
+	<style>
+
+		h1{
+			
+		  	font-size: 48px;
+		  	font-weight: bold;
+		  	color: #3498db;
+		  	text-align: center; 
+		  	letter-spacing: 2px; 
+		  	background-color: lightyellow;
+		}
+
+		h2 {
+			text-align: center;
+		  	font-size: 32px;
+		 	font-weight: 600;
+		  	color: #00722e;
+		  	margin: 30px 10px 15px 10px;
+		  	padding-bottom: 5px;
+		  	padding-top: 10px;
+		  	text-decoration: underline;
+		  	border-top: 1px solid black;
+		}
+
+		#intro{
+			font-size: 20px;
+			color: #444444;
+			margin: 10px 20px;
+			text-align: start;
+		}
+
+		sup,sub{
+			font-size: 12px;
+			padding: 0px 3px;
+		}
+
+		.mpt-desc {
+		  	font-size: 20px;
+		  	color: #444444; 
+		  	margin: 20px ;
+		  	text-align: justify;
+			/*border-bottom: 2px solid black; */
+		}
+
+		span.imp{
+			display: inline;
+			font-weight: 700;
+			font-style: italic;
+			background: lightsteelblue;
+		}
+
+		#henry-desc, #dimitri-desc{
+			display: flex;
+			gap: 20px;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#dimitri-desc{
+			flex-direction: row-reverse;
+		}
+
+		#henry-image-container, #dimitri-image-container{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			font-weight: 800;
+			text-decoration: underline;
+			background-color: #d79a9a;
+		}
+
+
+		#henry-image, #dimitri-image{
+			width: 240px;
+			height: 180px;
+			object-fit: cover;
+		}
+
+		ol{
+			margin: 20px;
+		}
+
+		ol li{
+			margin: 10px;
+			padding-right: 10px;
+		}
+
+		.advantages-list li{
+		    font-weight: 700;
+		    /* font-style: italic; */
+		    color: #414a8f;
+		    font-size: 21px;
+		}
+
+		.limitation-list li{
+			list-style: lower-alpha;
+		}
+
+
+		footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100px;
+		}
+
+
+
+	</style>
+</head>
+
+<body>
+
+	<a title="Menu" id="menu-open-button" onclick="ShowMenu()" style="display:none;">	
+		<svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="white"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg>
+	</a>
+
+	<div id="menu" class="menu-class-hidden">
+		
+		<div id="menu-inside-container" style="display: none;">
+			
+			<a id="menu-back-button" onclick="HideMenu()">&cross;</a>
+
+			<div class="menu-text" id="menu-header">
+				Menu
+			</div>
+
+			<div id="menu-button-container">
+				<a href="index.html" class="menu-button now-page">Periodic Table History</a>
+				<a href="periodic-table.html" class="menu-button">Modern Periodic Table</a>
+				<a href="sources.html" class="menu-button">Sources</a>
+			</div>
+		</div>
+	</div>
+
+
+	<header id="nav-bar-container" style="display:none;">
+		<nav>
+			
+			<div id="logo-container">
+				<img src="logo.png">
+			</div>
+
+		</nav>
+	</header>
+
+	<main id="main" style="display:none;"> 
+		
+		<h1 id="main-heading">Modern Periodic Table</h1>
+		
+		<div id="intro">
+			Before the nineteenth century, very few elements were known. So, it was quite easy to study and remember their individual properties.By the middle of the 19<sup>th</sup> century, many elements were discovered and their physical and chemical properties were identified.
+
+			As the number of elements increases, it was felt necessary to have some sort of classification of all known elements so that their study becomes systematic and easier.
+		</div>
+
+		<section class="mpt-desc" id="dimitri-desc">
+
+			<div id="dimitri-image-container">
+				<img id="dimitri-image" src="https://upload.wikimedia.org/wikipedia/commons/5/53/%EB%93%9C%EB%AF%B8%ED%8A%B8%EB%A6%AC_%EB%A9%98%EB%8D%B8%EB%A0%88%EC%98%88%ED%94%84.jpg">
+				Dimitri Mendeleev
+			</div>
+
+			<div>
+				The important remarkable contribution for the classification of elements was made by <span class="imp">Dimitri Ivanovich Mendeleev</span> in 1869. He put forward a periodic law based on the properties of elements known after his name as Mendeleev's periodic law. It stated that, <span class="imp">"The physical and chemical properties of an element are periodic function of their atomic weights." </span>
+				
+			</div>
+
+		</section>
+			
+
+
+		<section class="mpt-desc" id="henry-desc">
+
+			<div id="henry-image-container" >
+				<img  id="henry-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Henry_Moseley_%281887-1915%29.jpg/220px-Henry_Moseley_%281887-1915%29.jpg">
+				Henry Mosely
+			</div>
+
+			<div>
+				By the beginning of the 20<sup>th</sup> century, subatomic particles like electrons, protons and neutrons were discovered. Then it was realized that the fundamental property of each element was not its atomic weight but its nuclear charge expressed by atomic number.
+				In 1913, Henry Moseley, an English physicist found that physical and chemical properties of the elements are determined by atomic number rather than atomic weights. He suggested that atomic number instead of atomic weight is the basis of the classification of elements. This observation formulates modern periodic law. The modern periodic law states that, <span class="imp">"the physical and chemical properties of the element are periodic to their atomic number".</span>
+			</div>
+			
+
+		</section>
+
+		<section class="mpt-desc">
+			
+			It means that if the elments are arranged in the order of increasing atomic number, the elements with similar properties recur after regular intervals. Most of the anomalies and defects of Mendeleev's periodic table are removed by changing the basis of classification of elements from atomic weight to atomic number.<span class="imp"> The form of the periodic table based on modern periodic law is called "Modern Periodic Table"</span>
+
+		</section>
+
+		<section class="mpt-desc" id="features-of-mpt">
+			
+			<h2>Features of Modern Periodic Table</h2>
+
+			<div class="mpt-desc">
+				The main features of Modern Periodic table are as follows:	
+			</div>
+
+			<ol>
+				
+				<li>
+					There are in all, 18 verticle columns, i.e., 18 groups in the long form of periodic table called families or groups.Each group contains elements having same valence shellelectronic configuration, and they possess similar properties. They are numbered as <span class="imp">I, II, III, IV, V, VI, VII, VIII, and zero(nobel gases).</span>
+				</li>
+
+				<li>
+					According to IUPAC recommendation, these groups have been numbered from left as group 1 to group 18. The elements of Groups 1, 2 and 13 to 17 are called the main group elements. These are also called typical or representative or normal elements. These elements of groups 3 to 12 are known as transition elements.
+				</li>
+
+				<li>
+					There are several horizontal rows called <span class="imp">periods</span> in the long form of periodic table. Thery are denoted by 1, 2, 3, 4, 5, 6, 7. The periods are divided into short periods, long periods and incomplete period.
+					<br>Along the period, elements are arranged from left to right in their increase in order of atomic number. The outermost shell electronic configuration gradually changes along the period and chemical properties also vary gradually.
+				</li>
+
+				<li>
+					Elements with atomic number 58 to 71 (Ce to Lu) occuring after lanthanum (La) are called <span class="imp">lanthanides</span> whereas, the elements from atomic number 90 to 103 (Th to Lr) are <span class="imp">actinides</span>. These elements are collectively called f-block elements or innner transitions.
+				</li>
+
+				<li>
+					Lanthanides (4f-series) and actanides (5f-series) elements are given separate rows below the main periodic table to avoid unnecessary sidewise expansion of the periodic table.
+				</li>
+
+				<li>
+					Elements are classified into s-block, p-block, d-block, and f-block.
+				</li>
+
+				<li>
+					Metals and nonmetals are separated from each others.
+				</li>
+
+				<li>
+					Dissimilar elements are placed in subgroups for systematic classification of elements.
+				</li>
+
+			</ol>
+
+			
+
+		</section>
+
+
+		<section class="mpt-desc" id="advantages-of-mpt">
+			
+			<h2>Advantages of Modern Periodic Table</h2>
+
+			<div class="mpt-desc">
+				The long form of the periodic table has overcome the drawbacks of Mendeleev's periodic table by choosing atomic numbers as the basis of classification. The modern periodic table is superior to Mendeleev's classificaiton due to following reasons:
+			</div>
+
+			<ol class="advantages-list">
+				<li>Selection of scientific periodic law:</li>
+				<div>
+					Long-form periodic table is based on modern periodic law
+					which in turn based on the arrangement of the lements with increasig atomic number as a more fundamental property than its atomic weight or atomic volume. In the periodic table, the position of an element is related to the electronic configuration of its atoms which reflects their properties.
+				</div>
+
+				<li>Position of isotopes:</li>
+				<div>
+					In this table, the basis of classification is the atomic number, so isotopes (having same atomic no.) can be placed in a single place.Thus the position of isotopes is completely justified.
+				</div>
+
+				<li>Proper solution of Mendeelev's misfit points:</li>
+				<div>
+					The position of Ar, Co, Te, and Th before K, Ni, I, and Pa respectively in Mendeelev's classification does not obey this periodic law. This table solved anomaly by choosing atomic number as the basis of classification. For example, <sub>18</sub>Ar<sup>40</sup> proceeds <sub>19</sub>K<sup>39</sup> in the periodic table because the atomic number of Ar is less than K.
+				</div>
+
+				<li>Separate postion for subgroup:</li>
+				<div>
+					The modern periodic table provides the separate positions for subgroup A and subgroup B in his periodic table. Due to the separation into two subgroups, dissimilar elements like alkali and coinage metals do not fall together in the same group. Thus the separation of the subgroup is logical and lements with similar properties are kept together.
+				</div>
+
+				<li>Division of the elements into four blocks:</li>
+				<div>
+					The division of leements into <i>s, p, d, </i>and <i>f</i>-blocks based on an electronic configuration has made their study easier.	
+				</div>
+
+				<li>Separation between metallicand non-metallic elements:</li>
+				<div>
+					The modern periodic table has made complete separation of metals and non-metals. The metals are placed on the left and the non-metals are kept on the right side of the periodic table.
+				</div>
+
+				<li>Cause of periodicity:</li>
+				<div>
+					This periodic table has been successful to explain periodicity in certain atomic properties  like atomic radius, ionization potential, valency of any group by knowing electronic configuration from atomic number.
+				</div>
+
+			</ol>
+
+		</section>
+
+		<section class="mpt-desc" id="limitaions-mpt">
+			
+			<h2>Limitations of the Modern Periodic Table</h2>
+
+			Though the modern periodic table has removed most of the drawbacks of Mendeelev's periodic table but yet suffers from the following anomalies:
+
+			<ol class="limitation-list">
+				<li>
+					The <span class="imp">position of hydrogen</span> in the periodic table has not been solved yet completey though it has been kept along with group IA (alkali metals) and group VIIA (halogens) as it shows properties that resemble halogens and metals. However, it is placed in a separate box just above the group IA.
+				</li>
+
+				<li>
+					The <span class="imp">position of helium</span> along with the p-block elements is not completely justfied as its electronic configuration tells it to be included in the s-block (He -> 1s<sup>2</sup>) but this cannot be done because of the properties of helium are entirely different from s-block elements.
+				</li>
+
+				<li>
+					This table is unable to include <span class="imp">lanthanides</span> and <span class="imp">actanides</span> elements in its main body but placed at the bottom.
+				</li>
+			</ol>
+
+		</section>
+
+
+	</main>
+
+
+	<footer id="footer" style="display:none;">
+		<a href="periodic-table.html" class="real-nav-button">View Periodic Table -&gt; </a>
+	</footer>
+
+
+	<div style="display:flex;" class="loading-screen-container" id="loading-screen-container">
+		<div class="loading-screen-image-container">
+			<img src="logo.png" class="loading-screen-image" alt="Logo">
+		</div>
+		<div class="loading-line"></div>
+
+		<div id="credit" class="credit">
+			Created by: Samyog Mishra
+		</div>
+
+		<div class="easter" id="easter">
+			You are sharp, stranger!
+		</div>
+	</div>
+
+
+<script>
+
+	setTimeout(ShowMainScreen, 2500);
+
+	function ShowMainScreen(){
+		let NavElement = document.getElementById('nav-bar-container');
+		let MainElement = document.getElementById('main');
+		let FooterElement = document.getElementById('footer');
+		let LoadingElement = document.getElementById('loading-screen-container');
+		let MenuButtonElement = document.getElementById('menu-open-button');
+
+		LoadingElement.style.display = 'none';
+		NavElement.style.display = "block";
+		MainElement.style.display = "block";
+		FooterElement.style.display = "flex";
+		MenuButtonElement.style.display = "inline";
+	}
+
+	function ShowMenu(){
+		let MenuElement = document.getElementById('menu');
+		let MenuItems = document.getElementById('menu-inside-container');
+
+		MenuElement.classList.remove('menu-class-hidden');
+		MenuElement.classList.add('menu-class-show');
+
+		MenuItems.style.display = 'block';
+	}
+
+	function HideMenu(){
+		let MenuElement = document.getElementById('menu');
+		let MenuItems = document.getElementById('menu-inside-container');
+		
+		MenuItems.style.display = 'none';
+		MenuElement.classList.remove('menu-class-show');
+		MenuElement.classList.add('menu-class-hidden');
+	}
+
+</script>
+</body>
+</html>

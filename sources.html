@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modern Periodic Table</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="icon" href="logo.png">
+	<style>
+		main{
+			margin: 30px;
+		}
+		#heading{
+			font-size: 35px;
+			text-align: center;
+			text-decoration: underline;
+		}
+
+		#sources-list{
+			font-size: 22px;
+			font-weight: 500;
+		}
+
+		#sources-list .sources-list-item{
+			margin: 5px;
+			padding: 3px;
+			font-style: italic;
+			text-decoration: underline;
+		}
+
+		.sources-list-item a:hover{
+			color: rgb(33, 69, 151);
+		}
+
+	</style>
+</head>
+<body>
+
+	<a title="Menu" id="menu-open-button" onclick="ShowMenu()" style="display:none;">	
+		<svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="white"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg>
+	</a>
+
+	<div id="menu" class="menu-class-hidden">
+		
+		<div id="menu-inside-container" style="display: none;">
+			
+			<a id="menu-back-button" onclick="HideMenu()">&cross;</a>
+
+			<div class="menu-text" id="menu-header">
+				Menu
+			</div>
+
+			<div id="menu-button-container">
+				<a href="index.html" class="menu-button">Periodic Table History</a>
+				<a href="periodic-table.html" class="menu-button">Modern Periodic Table</a>
+				<a href="sources.html" class="menu-button now-page">Sources</a>
+			</div>
+		</div>
+	</div>
+
+
+	<header id="nav-bar-container" style="display:none;">
+		<nav>
+			
+			<div id="logo-container">
+				<img src="logo.png">
+			</div>
+
+		</nav>
+	</header>
+	
+	<main id="main" style="display: none;">
+		
+		<h2 id="heading">Sources and Refrence</h2>
+
+		<ul id="sources-list">
+			
+			<li class="sources-list-item">
+				Grade XI Pioneer Chemistry Book (Dreamland Publication) - Third edition 2080 (Revised)
+			</li>
+
+			<li class="sources-list-item">
+				<a href="https://byjus.com/periodic-table/" target="_blank">
+					Byjus - Modern Periodic Table
+				</a>
+			</li>
+
+			<li class="sources-list-item">
+				<a href="https://www.thoughtco.com/atoms-diagrams-electron-configurations-elements-4064658" target="_blank">
+					Thought Co - Atomic structure of elements
+				</a>
+			</li>
+
+			<li class="sources-list-item">
+				<a href="https://en.wikipedia.org/wiki/Electron_configuration" target="_blank">
+					Wikipedia - Atoms electronic configuration
+				</a>
+			</li>
+
+			<li class="sources-list-item">
+				<a href="https://en.wikipedia.org/wiki/Metalloid" target="_blank">
+					Wikipedia - Metalloids
+				</a>
+				
+			</li>
+
+
+		</ul>
+
+	</main>
+
+	<footer id="footer" style="display: none;">
+		
+	</footer>
+
+
+	<div style="display:flex;" class="loading-screen-container" id="loading-screen-container">
+		<div class="loading-screen-image-container">
+			<img src="logo.png" class="loading-screen-image" alt="Logo">
+		</div>
+		<div class="loading-line"></div>
+
+		<div id="credit" class="credit">
+			Created by: Samyog Mishra
+		</div>
+
+		<div class="easter" id="easter">
+			You are sharp, stranger!
+		</div>
+	</div>
+
+
+<script>
+
+	setTimeout(ShowMainScreen, 2500);
+
+	function ShowMainScreen(){
+		let NavElement = document.getElementById('nav-bar-container');
+		let MainElement = document.getElementById('main');
+		let FooterElement = document.getElementById('footer');
+		let LoadingElement = document.getElementById('loading-screen-container');
+		let MenuButtonElement = document.getElementById('menu-open-button');
+
+		LoadingElement.style.display = 'none';
+		NavElement.style.display = "block";
+		MainElement.style.display = "block";
+		FooterElement.style.display = "flex";
+		MenuButtonElement.style.display = "inline";
+	}
+
+	function ShowMenu(){
+		let MenuElement = document.getElementById('menu');
+		let MenuItems = document.getElementById('menu-inside-container');
+
+		MenuElement.classList.remove('menu-class-hidden');
+		MenuElement.classList.add('menu-class-show');
+
+		MenuItems.style.display = 'block';
+	}
+
+	function HideMenu(){
+		let MenuElement = document.getElementById('menu');
+		let MenuItems = document.getElementById('menu-inside-container');
+		
+		MenuItems.style.display = 'none';
+		MenuElement.classList.remove('menu-class-show');
+		MenuElement.classList.add('menu-class-hidden');
+	}
+
+</script>
+</body>
+</html>
